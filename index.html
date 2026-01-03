@@ -6,140 +6,142 @@
     <title>EVEPRO GLOW</title>
     <style>
         body {
-            background-color: #000000;
+            background-color: #0f172a; /* Deep Navy Background */
             color: #ffffff;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 30px 20px;
+            padding: 40px 20px;
             margin: 0;
             text-align: center;
         }
 
+        /* Hero Section */
         h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: 800;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-            background: linear-gradient(to right, #ffffff, #9ca3af);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            color: #ffffff;
         }
 
         p.subtitle {
-            color: #4ade80; /* Clinical Green */
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-top: 0;
-            margin-bottom: 40px;
-            font-weight: 600;
-        }
-
-        /* Service List Container */
-        .treatment-menu {
-            width: 100%;
-            max-width: 500px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-bottom: 40px;
-        }
-
-        /* Individual Service Box */
-        .service-card {
-            background-color: #111;
-            border: 1px solid #333;
-            padding: 20px;
-            border-radius: 12px;
-            text-align: left;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-        }
-
-        .service-name {
-            font-size: 1.1rem;
-            font-weight: 500;
-            color: #fff;
-        }
-
-        .check-mark {
-            color: #4ade80;
+            color: #94a3b8; /* Soft Grey */
             font-size: 1.2rem;
+            margin-top: 0;
+            margin-bottom: 50px;
+            font-weight: 400;
         }
 
-        /* Special Offer Box */
-        .special-offer {
-            background: rgba(74, 222, 128, 0.1);
-            border: 1px solid #4ade80;
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 30px;
+        /* The Grid Layout */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
             width: 100%;
-            max-width: 500px;
+            max-width: 600px;
+            margin-bottom: 40px;
         }
 
-        .offer-header {
-            color: #4ade80;
-            font-weight: bold;
-            text-transform: uppercase;
+        /* The Blue Card Design */
+        .service-card {
+            background: linear-gradient(135deg, #1e3a8a 0%, #172554 100%);
+            border: 1px solid #3b82f6;
+            padding: 25px;
+            border-radius: 16px;
+            text-align: left;
+            transition: transform 0.2s;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: block;
+            color: #ffffff;
+        }
+
+        .service-desc {
             font-size: 0.9rem;
-            margin-bottom: 5px;
+            color: #bfdbfe;
+            margin-bottom: 15px;
+            line-height: 1.4;
         }
 
-        /* Call Button */
-        .btn {
-            background-color: #ffffff;
-            color: #000000;
-            padding: 18px 40px;
-            font-size: 1.1rem;
+        .price-tag {
             font-weight: bold;
-            text-decoration: none;
-            border-radius: 50px;
-            display: inline-block;
-            margin-top: 10px;
-            box-shadow: 0 0 15px rgba(255,255,255,0.2);
+            color: #60a5fa;
+            font-size: 1.1rem;
         }
+
+        /* The Gold Button */
+        .book-btn {
+            background: linear-gradient(90deg, #fbbf24, #d97706);
+            color: #000;
+            font-weight: 800;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            box-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
+            transition: transform 0.2s;
+        }
+
+        .book-btn:active {
+            transform: scale(0.95);
+        }
+        
+        /* Section Title */
+        .section-header {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
     </style>
 </head>
 <body>
 
     <h1>EVEPRO GLOW</h1>
-    <p class="subtitle">Clinical Aesthetics</p>
+    <p class="subtitle">Science-Backed Mobile Skincare</p>
 
-    <div class="treatment-menu">
+    <div class="section-header">Our Treatments</div>
+
+    <div class="services-grid">
         
         <div class="service-card">
-            <span class="service-name">6-in-1 Hydro-Facial System</span>
-            <span class="check-mark">✔</span>
+            <span class="service-title">6-in-1 Hydro-Facial System</span>
+            <div class="service-desc">Deep cleansing, exfoliation, extraction, and hydration using medical-grade hydro technology.</div>
+            <div class="price-tag">$250</div>
         </div>
 
         <div class="service-card">
-            <span class="service-name">Korean Oxygen Therapy</span>
-            <span class="check-mark">✔</span>
+            <span class="service-title">Korean Oxygen Infusion</span>
+            <div class="service-desc">Advanced oxygen therapy with custom Korean serums tailored to your skin analysis.</div>
+            <div class="price-tag">$150</div>
         </div>
 
         <div class="service-card">
-            <span class="service-name">Clinical Grade 320 LED</span>
-            <span class="check-mark">✔</span>
+            <span class="service-title">Medical-Grade LED</span>
+            <div class="service-desc">Clinical-strength LED therapy for anti-aging, acne treatment, and skin rejuvenation.</div>
+            <div class="price-tag">$85</div>
         </div>
 
-        <div class="service-card">
-            <span class="service-name">AI Skin Analysis</span>
-            <span class="check-mark">✔</span>
+        <div class="service-card" style="border-color: #4ade80;">
+            <span class="service-title" style="color: #4ade80;">New Client Special</span>
+            <div class="service-desc" style="color: #ffffff;">Includes Full AI Skin Analysis & Consultation.</div>
+            <div class="price-tag" style="color: #4ade80;">$99</div>
         </div>
 
     </div>
 
-    <div class="special-offer">
-        <div class="offer-header">New Client Special</div>
-        <div style="font-size: 1.1rem;">$99 AI Face Scan included with first visit</div>
-    </div>
-
-    <a href="tel:15167243208" class="btn">Call to Book Appointment</a>
+    <a href="tel:19176339282" class="book-btn">Book Your Session Now</a>
 
 </body>
 </html>
