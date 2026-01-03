@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVEPRO GLOW</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+        }
+        h1 {
+            font-size: 3rem;
+            color: #00ff00;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .card {
+            border: 2px solid #333;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            background-color: #111;
+        }
+        button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: #00ff00;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        button:hover {
+            background-color: #00cc00;
+        }
+    </style>
+</head>
+<body>
+    <h1>EVEPRO GLOW</h1>
+    <p>Clinical Grade 320 LED Therapy</p>
+    <div class="card">
+        <h2>$99 AI Face Scan</h2>
+        <p>Book your clinical analysis today.</p>
+        <button onclick="alert('Booking System Connecting...')">Book Now</button>
+    </div>
+</body>
+</html>
