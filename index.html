@@ -147,46 +147,21 @@
 </html
 <h2 style="text-align:center; margin:60px 0 40px; font-size:32px; font-weight:bold; color:#333;">Real Client Glow Transformations</h2>
 <p style="text-align:center; margin-bottom:50px; font-style:italic; color:#666; font-size:18px;">Instant results from EVEPRO GLOW mobile sessions – science-backed radiance</p>
+// PROGLOW EMPIRE: Treasure Capture System
+const glowForm = document.querySelector('#name-capture-form');
 
-<div style="display:flex; flex-wrap:wrap; justify-content:center; gap:40px; margin:40px 0;">
-  <div style="text-align:center; flex:1; min-width:280px; max-width:400px;">
-    <img src="IMG_9184.png" alt="Before Treatment - Dull Skin" style="width:100%; border-radius:20px; box-shadow:0 15px 40px rgba(0,0,0,0.25);">
-    <p style="margin-top:20px; font-weight:bold; font-size:20px;">Before</p>
-    <p style="color:#888;">Dull, dehydrated skin</p>
-  </div>
-  
-  <div style="text-align:center; flex:1; min-width:280px; max-width:400px;">
-    <img src="IMG_9185.jpeg" alt="After Korean Oxygen Infusion - Glass Skin Glow" style="width:100%; border-radius:20px; box-shadow:0 15px 40px rgba(0,0,0,0.25);">
-    <p style="margin-top:20px; font-weight:bold; font-size:20px;">After Session 1</p>
-    <p style="color:#888;">Hydrated, radiant glass skin</p>
-  </div>
-  
-  <div style="text-align:center; flex:1; min-width:280px; max-width:400px;">
-    <img src="YOUR_THIRD_src="glow-results-3.jp
+glowForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const clientName = document.querySelector('#client-name').value;
+    const clientEmail = document.querySelector('#client-email').value;
 
+    // This triggers a direct notification to your business email
+    const mailtoLink = `mailto:Eveproglow1111@gmail.com?subject=GLOW ALERT: New Treasure Captured&body=Client Name: ${clientName}%0D%0AClient Email: ${clientEmail}%0D%0AStatus: Priority Restoration`;
 
+    window.location.href = mailtoLink;
 
-
-
-<div style="text-align:center; margin-top:40px;">
-    <button onclick="handleBooking()" style="background-color:#D4AF37; color:white; padding:15px 40px; border:none; border-radius:30px; font-weight:bold; cursor:pointer; box-shadow: 0 4px 15px rgba(212,175,55,0.4);">
-        Book Your Glow Session
-    </button>
-</div>
-
-<script>
-function handleBooking() {
-    const name = prompt("To provide your priority 'Glow' treatment, what is your name?");
-    if (name) {
-        alert("Thank you, " + name + ". Your session is being processed. Get ready for the transformation.");
-        // This is where she can help you link the actual payment later
-    }
-}
-</script>
-ext" alt="Another Real Glow Transformation" style="width:100%; border-radius:20px; box-shadow:0 15px 40px rgba(0,0,0,0.25);">
-    <p style="margin-top:20px; font-weight:bold; font-size:20px;">After Session</p>
-    <p style="color:#888;">Brighter, smoother results</p>
-  </div>
-</div>
-
-<p style="text-align:center; font-style:italic; margin:50px 0; color:#777;">Individual results may vary • Book your mobile session for personalized glow</p>
+    // Visual confirmation for the audit
+    alert(`Glow Alert Successful! ${clientName} is now in the ProGlow System.`);
+    glowForm.reset();
+});
