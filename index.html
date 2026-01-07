@@ -261,3 +261,291 @@
     </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EVEPRO GLOW</title>
+<style>
+body {
+background-color: #0f172a;
+color: #ffffff;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 40px 20px;
+margin: 0;
+text-align: center;
+}
+
+h1 {
+font-size: 3rem;
+font-weight: 800;
+margin-bottom: 10px;
+color: #ffffff;
+}
+
+p.subtitle {
+color: #94a3b8;
+font-size: 1.2rem;
+margin-top: 0;
+margin-bottom: 50px;
+font-weight: 400;
+}
+
+.section-header {
+font-size: 1.5rem;
+font-weight: 700;
+margin-bottom: 20px;
+color: #ffffff;
+}
+
+/* Responsive Grids */
+.services-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 30px;
+width: 100%;
+max-width: 1200px;
+margin-bottom: 40px;
+}
+
+.results-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 30px;
+width: 100%;
+max-width: 1200px;
+margin-bottom: 40px;
+}
+
+/* NEW: Equipment Gallery */
+.equip-gallery {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 30px;
+width: 100%;
+max-width: 1200px;
+margin-bottom: 60px;
+}
+
+.equip-gallery img {
+width: 100%;
+border-radius: 16px;
+border: 2px solid #60a5fa;
+box-shadow: 0 4px 20px rgba(96, 165, 250, 0.4);
+}
+
+/* Cards */
+.service-card {
+background: linear-gradient(135deg, #1e3a8a 0%, #172554 100%);
+border: 1px solid #3b82f6;
+padding: 25px;
+border-radius: 16px;
+text-align: left;
+transition: transform 0.2s;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.service-card:hover {
+transform: translateY(-5px);
+}
+
+.service-card.special {
+border: 2px solid #4ade80;
+box-shadow: 0 4px 30px rgba(74, 222, 128, 0.3);
+}
+
+.service-card.special .service-title,
+.service-card.special .price-tag {
+color: #4ade80;
+}
+
+.service-card.special .service-desc {
+color: #ffffff;
+}
+
+.service-title {
+font-size: 1.3rem;
+font-weight: 700;
+margin-bottom: 8px;
+display: block;
+color: #ffffff;
+}
+
+.service-desc {
+font-size: 0.9rem;
+color: #bfdbfe;
+margin-bottom: 15px;
+line-height: 1.4;
+}
+
+.price-tag {
+font-weight: bold;
+color: #60a5fa;
+font-size: 1.1rem;
+}
+
+/* Buttons */
+.book-btn {
+background: linear-gradient(90deg, #fbbf24, #d97706);
+color: #000;
+font-weight: 800;
+padding: 18px 40px;
+border-radius: 50px;
+text-decoration: none;
+font-size: 1.2rem;
+box-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
+transition: all 0.2s;
+display: inline-block;
+}
+
+.book-btn:hover {
+transform: scale(1.05);
+box-shadow: 0 0 30px rgba(251, 191, 36, 0.6);
+}
+
+.book-btn:active {
+transform: scale(0.95);
+}
+
+/* Results Images */
+.results-grid img {
+width: 100%;
+border-radius: 16px;
+border: 2px solid #fbbf24;
+box-shadow: 0 4px 20px rgba(251, 191, 36, 0.3);
+loading: lazy;
+}
+
+/* Glow Section */
+#glow-section {
+background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+border: 2px solid #fbbf24;
+padding: 30px;
+border-radius: 20px;
+width: 100%;
+max-width: 500px;
+margin-bottom: 50px;
+}
+
+#glow-section h2 {
+color: #fbbf24;
+margin-top: 0;
+}
+
+#glowForm input {
+padding: 15px;
+border-radius: 8px;
+background: #0f172a;
+color: #fff;
+border: 1px solid #334155;
+}
+
+#glowForm button {
+background: #fbbf24;
+color: #000;
+padding: 15px;
+border-radius: 8px;
+border: none;
+font-weight: 800;
+cursor: pointer;
+margin-top: 10px;
+}
+
+#glowForm button:hover {
+background: #facc15;
+}
+</style>
+</head>
+<body>
+
+<h1>EVEPRO GLOW</h1>
+<p class="subtitle">Science-Backed Mobile Skincare</p>
+
+<div class="section-header">Our Treatments</div>
+
+<div class="services-grid">
+
+<div class="service-card">
+<span class="service-title">6-in-1 Hydro-Facial System</span>
+<div class="service-desc">Deep cleansing, exfoliation, extraction, and hydration using medical-grade hydro technology.</div>
+<div class="price-tag">$250</div>
+</div>
+
+<div class="service-card">
+<span class="service-title">Korean Oxygen Infusion</span>
+<div class="service-desc">Advanced oxygen therapy with custom Korean serums tailored to your skin analysis.</div>
+<div class="price-tag">$150</div>
+</div>
+
+<div class="service-card">
+<span class="service-title">Medical-Grade LED</span>
+<div class="service-desc">Clinical-strength LED therapy for anti-aging, acne treatment, and skin rejuvenation.</div>
+<div class="price-tag">$85</div>
+</div>
+
+<div class="service-card special">
+<span class="service-title">New Client Special</span>
+<div class="service-desc">Includes Full AI Skin Analysis & Consultation.</div>
+<div class="price-tag">$99</div>
+</div>
+
+</div>
+
+<a href="tel:19176339282" class="book-btn">Book Your Session Now</a>
+
+<!-- NEW GALLERY ADDED UNDERNEATH TREATMENTS -->
+<div class="section-header" style="margin-top: 60px;">Our Real Equipment</div>
+<div class="equip-gallery">
+<img src="IMG_9187.jpeg" alt="Hydro-Facial Machine">
+<img src="IMG_9392.png" alt="Medical-Grade LED Panels">
+<!-- Add more real uploads here when ready -->
+</div>
+
+<div class="section-header" style="margin-top: 60px;">Real Results</div>
+
+<div class="results-grid">
+<img src="IMG_9184.png" alt="Before and After: Full Face Radiant Glow" loading="lazy">
+<img src="IMG_9185.jpeg" alt="Before and After: Acne & Redness Cleared" loading="lazy">
+<img src="IMG_9317.jpeg" alt="Before and After: Fine Lines Smoothed" loading="lazy">
+</div>
+
+<div id="glow-section">
+<h2>RESTORATION AUDIT</h2>
+<form id="glowForm" style="display: flex; flex-direction: column; gap: 15px;">
+<input type="text" id="userName" placeholder="Your Name" required>
+<input type="email" id="userEmail" placeholder="Your Email" required>
+<button type="submit">TRIGGER GLOW ALERT</button>
+</form>
+</div>
+
+<script>
+document.getElementById('glowForm').addEventListener('submit', function(e) {
+e.preventDefault();
+const name = document.getElementById('userName').value.trim();
+const email = document.getElementById('userEmail').value.trim();
+
+if (!name || !email) {
+alert("Please fill in both fields, treasure.");
+return;
+}
+
+const subject = encodeURIComponent("GLOW ALERT: " + name);
+const body = encodeURIComponent(
+"New Treasure Captured:\n\n" +
+"Name: " + name + "\n" +
+"Email: " + email + "\n\n" +
+"The glow awaits."
+);
+
+window.location.href = "mailto:Eveproglow1111@gmail.com?subject=" + subject + "&body=" + body;
+
+alert("Glow Alert Sent. The Empire is watching.");
+this.reset();
+});
+</script>
+</body>
+</html>
