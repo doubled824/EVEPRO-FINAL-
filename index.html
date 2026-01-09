@@ -12,6 +12,7 @@
             margin: 0;
             padding: 0;
             text-align: center;
+            overflow-x: hidden;
         }
 
         h1 {
@@ -116,6 +117,25 @@
             box-shadow: 0 4px 20px rgba(96, 165, 250, 0.4);
         }
 
+        /* Mega Book Button */
+        .mega-book-btn {
+            background: #00ccff;
+            color: white;
+            padding: 40px 80px;
+            font-size: 3rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 30px;
+            box-shadow: 0 0 60px #00ccff;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .mega-book-btn:hover {
+            box-shadow: 0 0 80px #00ccff;
+            transform: scale(1.05);
+        }
+
         /* Glow Form */
         #glow-section {
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
@@ -138,6 +158,8 @@
             color: #fff;
             border: 1px solid #334155;
             margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         #glowForm button {
@@ -148,16 +170,39 @@
             border: none;
             font-weight: 800;
             cursor: pointer;
+            width: 100%;
         }
 
         #glowForm button:hover {
             background: #facc15;
         }
 
-        /* Responsive */
+        /* Responsive Fixes */
         @media (max-width: 768px) {
             h1 { font-size: 2.5rem; }
             .section-header { font-size: 1.8rem; }
+            
+            /* Grand Opening Text */
+            .grand-opening h2 { font-size: 2.2rem !important; }
+            .grand-opening p { font-size: 1.6rem !important; }
+            
+            /* Mega Button */
+            .mega-book-btn {
+                padding: 24px 48px;
+                font-size: 2rem;
+                width: 90%;
+                max-width: 400px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .mega-book-btn {
+                padding: 20px 40px;
+                font-size: 1.8rem;
+            }
+            
+            .grand-opening h2 { font-size: 2rem !important; }
+            .grand-opening p { font-size: 1.4rem !important; }
         }
     </style>
 </head>
@@ -170,15 +215,13 @@
         Customized Korean hydrogen-oxygen facials + FREE AI skin analysis delivered to your door. Instant plump, brighter, clearer skin.
     </p>
 
-    <div style="background: #001133; padding: 60px 20px; margin: 40px 0;">
+    <div class="grand-opening" style="background: #001133; padding: 60px 20px; margin: 40px 0;">
         <h2 style="color: #ff0066; font-size: 2.8rem; margin: 0 0 30px;">GRAND OPENING WEEK 🔥</h2>
         <p style="font-size: 2.2rem; margin: 0 0 50px;">$99 New Client Intro – Limited Spots This Week Only</p>
         
         <div style="text-align:center; margin:60px 0;">
             <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/eveproservices143/eveproglow'});return false;">
-                <button style="background:#00ccff; color:white; padding:40px 80px; font-size:3rem; border:none; border-radius:30px; box-shadow:0 0 60px #00ccff; cursor:pointer;">
-                    BOOK $99 INTRO INSTANTLY
-                </button>
+                <button class="mega-book-btn">BOOK $99 INTRO INSTANTLY</button>
             </a>
         </div>
     </div>
@@ -227,7 +270,7 @@
     </div>
 
     <div class="section-header">Watch The AI Scan In Action</div>
-    <div style="max-width: 800px; margin: 0 auto 60px;">
+    <div style="max-width: 800px; margin: 0 auto 60px; padding: 0 20px;">
         <iframe width="100%" height="450" src="https://www.youtube.com/embed/MJIsKQZeafw" title="AI Skin Analysis Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <p style="color: #94a3b8; margin-top: 20px;">Beauty pros + real client reactions (same tech we use)</p>
     </div>
@@ -253,12 +296,10 @@
         </form>
     </div>
 
-    <!-- Final big CTA at bottom -->
+    <!-- Final mega CTA -->
     <div style="text-align:center; margin:80px 0;">
         <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/eveproservices143/eveproglow'});return false;">
-            <button style="background:#00ccff; color:white; padding:40px 80px; font-size:3rem; border:none; border-radius:30px; box-shadow:0 0 60px #00ccff; cursor:pointer;">
-                BOOK $99 INTRO INSTANTLY
-            </button>
+            <button class="mega-book-btn">BOOK $99 INTRO INSTANTLY</button>
         </a>
     </div>
 
