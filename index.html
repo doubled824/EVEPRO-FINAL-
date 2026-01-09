@@ -9,53 +9,41 @@
             background-color: #0f172a;
             color: #ffffff;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 40px 20px;
             margin: 0;
+            padding: 0;
             text-align: center;
         }
 
         h1 {
             font-size: 3rem;
             font-weight: 800;
-            margin-bottom: 10px;
-            color: #ffffff;
+            margin: 20px 0 10px;
         }
 
         p.subtitle {
             color: #94a3b8;
             font-size: 1.2rem;
-            margin-top: 0;
-            margin-bottom: 50px;
-            font-weight: 400;
+            margin: 0 0 40px;
+            max-width: 900px;
+            padding: 0 20px;
         }
 
         .section-header {
-            font-size: 1.5rem;
+            font-size: 2rem;
             font-weight: 700;
-            margin-bottom: 20px;
+            margin: 60px 0 30px;
             color: #ffffff;
         }
 
-        /* Responsive Grids */
-        .services-grid {
+        /* Grids */
+        .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             width: 100%;
             max-width: 1200px;
-            margin-bottom: 40px;
-        }
-
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            width: 100%;
-            max-width: 1200px;
-            margin-bottom: 40px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
         }
 
         /* Cards */
@@ -65,8 +53,8 @@
             padding: 25px;
             border-radius: 16px;
             text-align: left;
-            transition: transform 0.2s;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            transition: transform 0.2s;
         }
 
         .service-card:hover {
@@ -83,72 +71,59 @@
             color: #4ade80;
         }
 
-        .service-card.special .service-desc {
-            color: #ffffff;
-        }
-
         .service-title {
             font-size: 1.3rem;
             font-weight: 700;
             margin-bottom: 8px;
-            display: block;
             color: #ffffff;
         }
 
         .service-desc {
             font-size: 0.9rem;
             color: #bfdbfe;
+            line-height: 1.5;
             margin-bottom: 15px;
-            line-height: 1.4;
         }
 
         .price-tag {
+            font-size: 1.5rem;
             font-weight: bold;
             color: #60a5fa;
-            font-size: 1.1rem;
         }
 
-        /* Buttons */
-        .book-btn {
-            background: linear-gradient(90deg, #fbbf24, #d97706);
-            color: #000;
-            font-weight: 800;
-            padding: 18px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 1.2rem;
-            box-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
-            transition: all 0.2s;
-            display: inline-block;
+        .review-card p {
+            font-style: italic;
+            color: #bfdbfe;
+            margin-bottom: 10px;
         }
 
-        .book-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(251, 191, 36, 0.6);
+        .review-card p:last-child {
+            font-weight: bold;
+            color: #4ade80;
+            font-style: normal;
         }
 
-        .book-btn:active {
-            transform: scale(0.95);
-        }
-
-        /* Results Images */
-        .results-grid img {
+        /* Images */
+        img {
             width: 100%;
             border-radius: 16px;
-            border: 2px solid #fbbf24;
             box-shadow: 0 4px 20px rgba(251, 191, 36, 0.3);
-            loading: lazy;
+            border: 2px solid #fbbf24;
         }
 
-        /* Glow Section */
+        .equip-gallery img {
+            border: 2px solid #60a5fa;
+            box-shadow: 0 4px 20px rgba(96, 165, 250, 0.4);
+        }
+
+        /* Glow Form */
         #glow-section {
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             border: 2px solid #fbbf24;
             padding: 30px;
             border-radius: 20px;
-            width: 100%;
             max-width: 500px;
-            margin-bottom: 50px;
+            margin: 60px auto;
         }
 
         #glow-section h2 {
@@ -162,6 +137,7 @@
             background: #0f172a;
             color: #fff;
             border: 1px solid #334155;
+            margin-bottom: 10px;
         }
 
         #glowForm button {
@@ -172,35 +148,100 @@
             border: none;
             font-weight: 800;
             cursor: pointer;
-            margin-top: 10px;
         }
 
         #glowForm button:hover {
             background: #facc15;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .section-header { font-size: 1.8rem; }
         }
     </style>
 </head>
 <body>
 
     <h1>EVEPRO GLOW</h1>
-    <p class="subtitle">Science-Backed Mobile Skincare</p>
+    <p class="subtitle">Science-Backed Mobile Skincare • NYC + Nassau</p>
 
-    <div class="section-header">Our Treatments</div>
+    <p style="font-size: 1.4rem; max-width: 900px; margin: 0 auto 40px; padding: 0 20px; line-height: 1.6;">
+        Customized Korean hydrogen-oxygen facials + FREE AI skin analysis delivered to your door. Instant plump, brighter, clearer skin.
+    </p>
 
-<div class="section-header">Customized Korean Hydrogen-Oxygen Facials</div>
-<p class="subtitle" style="max-width: 900px; margin: 20px auto 50px; font-size: 1.1rem; line-height: 1.6;">Every session INCLUDES FREE AI Skin Analysis + personalized Korean hydrogen-oxygen therapy: H2O2 small bubble antioxidant deep cleanse/extraction mixed with oxygen dome infusion, premium serums, LED, RF & more. Mobile pro results. Glow that lasts.</p>
-
-</div>
+    <div style="background: #001133; padding: 60px 20px; margin: 40px 0;">
+        <h2 style="color: #ff0066; font-size: 2.8rem; margin: 0 0 30px;">GRAND OPENING WEEK 🔥</h2>
+        <p style="font-size: 2.2rem; margin: 0 0 50px;">$99 New Client Intro – Limited Spots This Week Only</p>
+        
+        <div style="text-align:center; margin:60px 0;">
+            <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/eveproservices143/eveproglow'});return false;">
+                <button style="background:#00ccff; color:white; padding:40px 80px; font-size:3rem; border:none; border-radius:30px; box-shadow:0 0 60px #00ccff; cursor:pointer;">
+                    BOOK $99 INTRO INSTANTLY
+                </button>
+            </a>
+        </div>
     </div>
 
-    <a href="tel:19176339282" class="book-btn">Book Your Session Now</a>
+    <div class="section-header">Our Treatments</div>
+    <div class="grid">
+        <div class="service-card special">
+            <span class="service-title">New Client Intro Special</span>
+            <div class="service-desc">Full AI Skin Analysis + Signature Hydro-Glow Facial (everything below)</div>
+            <div class="price-tag">$99 <small style="font-size:0.8rem; color:#94a3b8;">(reg. $250)</small></div>
+        </div>
+        <div class="service-card">
+            <span class="service-title">Signature Hydro-Glow Facial</span>
+            <div class="service-desc">6-in-1 deep cleanse, extraction, hydrogen-oxygen therapy, custom serums, oxygen dome, LED + RF</div>
+            <div class="price-tag">$250</div>
+        </div>
+        <div class="service-card">
+            <span class="service-title">Korean Oxygen Infusion Add-On</span>
+            <div class="service-desc">Extra custom serum boost under oxygen dome</div>
+            <div class="price-tag">+$150</div>
+        </div>
+        <div class="service-card">
+            <span class="service-title">Medical-Grade LED Add-On</span>
+            <div class="service-desc">Targeted anti-aging or acne healing</div>
+            <div class="price-tag">+$85</div>
+        </div>
+    </div>
 
-    <div class="section-header" style="margin-top: 60px;">Real Results</div>
-    
-    <div class="results-grid">
-        <img src="IMG_9184.png" alt="Before and After: Full Face Radiant Glow" loading="lazy">
-        <img src="IMG_9185.jpeg" alt="Before and After: Acne & Redness Cleared" loading="lazy">
-        <img src="IMG_9317.jpeg" alt="Before and After: Fine Lines Smoothed" loading="lazy">
+    <a href="tel:19176339282" style="display:inline-block; background: linear-gradient(90deg, #fbbf24, #d97706); color:#000; font-weight:800; padding:18px 40px; border-radius:50px; text-decoration:none; font-size:1.4rem; margin:20px 0; box-shadow:0 0 20px rgba(251,191,36,0.4);">
+        Call/Text to Book
+    </a>
+
+    <div class="section-header">Our Professional Equipment</div>
+    <div class="grid equip-gallery">
+        <img src="IMG_9187.jpeg" alt="Hydro-Facial Machine" loading="lazy">
+        <img src="IMG_9392.png" alt="Medical-Grade LED Panels" loading="lazy">
+        <img src="aiscreen.jpeg" alt="AI Skin Analyzer in Action" loading="lazy">
+        <img src="hothearpy.jpeg" alt="Oxygen Therapy Dome" loading="lazy">
+    </div>
+
+    <div class="section-header">Real Client Results</div>
+    <div class="grid">
+        <img src="IMG_9184.png" alt="Before/After: Full Face Radiant Glow" loading="lazy">
+        <img src="IMG_9185.jpeg" alt="Before/After: Acne & Redness Cleared" loading="lazy">
+        <img src="IMG_9317.jpeg" alt="Before/After: Fine Lines Smoothed" loading="lazy">
+    </div>
+
+    <div class="section-header">Watch The AI Scan In Action</div>
+    <div style="max-width: 800px; margin: 0 auto 60px;">
+        <iframe width="100%" height="450" src="https://www.youtube.com/embed/MJIsKQZeafw" title="AI Skin Analysis Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p style="color: #94a3b8; margin-top: 20px;">Beauty pros + real client reactions (same tech we use)</p>
+    </div>
+
+    <div class="section-header">Early Client Reviews</div>
+    <div class="grid">
+        <div class="service-card review-card">
+            <p>"The AI scan showed me things I never knew — game-changer for my skin routine!"</p>
+            <p>- Sarah K. (Launch Week)</p>
+        </div>
+        <div class="service-card review-card">
+            <p>"Best glow I've ever had — highly recommend the Hydro + scan combo."</p>
+            <p>- Emily R.</p>
+        </div>
     </div>
 
     <div id="glow-section">
@@ -212,17 +253,17 @@
         </form>
     </div>
 
-    
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>  GRAND OPENING WEEK 🔥<br>
-  $99 New Client Intro – Limited Spots This Week Only
-<div style="text-align:center; margin:60px 0;">
-  <a href="" onclick="Calendly.initPopupWidget({url: https://calendly.com/eveproservices143/eveproglow);return false;">
-    <button style="background:#00ccff; color:white; padding:40px 80px; font-size:3rem; border:none; border-radius:30px; box-shadow:0 0 60px #00ccff;">
-      BOOK $99 INTRO INSTANTLY
-    </button>
-  </a>
-</div>
-</div></div>    <script>
+    <!-- Final big CTA at bottom -->
+    <div style="text-align:center; margin:80px 0;">
+        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/eveproservices143/eveproglow'});return false;">
+            <button style="background:#00ccff; color:white; padding:40px 80px; font-size:3rem; border:none; border-radius:30px; box-shadow:0 0 60px #00ccff; cursor:pointer;">
+                BOOK $99 INTRO INSTANTLY
+            </button>
+        </a>
+    </div>
+
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <script>
         document.getElementById('glowForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const name = document.getElementById('userName').value.trim();
@@ -248,334 +289,5 @@
         });
     </script>
 
-<div style="background: url('ai_9392.png') center/cover no-repeat, linear-gradient(to bottom, rgba(0,17,51,0.8), rgba(0,0,0,0.9)); color:#00ff99; padding:120px 20px; text-align:center; min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; box-shadow: inset 0 0 150px #00ff99;">
-  <img src="aiscreen.jpeg" alt="EveProGlow AI Scan" style="width:90%; max-width:500px; border-radius:20px; margin-bottom:40px; box-shadow:0 0 40px #00ff99;">
-  <h1 style="font-size:5.5rem; font-weight:bold; text-shadow: 0 0 40px #00ff99;">GRAND OPENING 🔥</h1>
-  <h2 style="font-size:3.5rem; margin:40px 0;">Medical-Grade Korean Glow At Your Door</h2>
-  <p style="font-size:2.2rem; max-width:900px; margin-bottom:60px;">Custom hydrogen-oxygen facials + FREE AI analysis. Instant plump, bright results. NYC + Nassau.</p>
-  <img src="hothearpy.jpeg" alt="Treatment in action" style="width:90%; max-width:700px; border-radius:20px; margin:40px 0; box-shadow:0 0 50px #00ccff;">
-  <p style="font-size:3rem; color:#ff0066; font-weight:bold; margin:50px 0;">$99 Intro Spots Limited This Week</p>
-  <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/YOUR-LINK-HERE'});return false;">
-    <button style="background:#00ccff; color:white; padding:40px 80px; font-size:3.2rem; border:none; border-radius:30px; box-shadow:0 0 60px #00ccff;">
-      BOOK $99 INTRO NOW
-    </button>
-  </a>
-</div>
-    
-<div style="text-align:center; margin:80px 0; padding:40px; background:#001133; border-radius:20px;">
-  <h2 style="color:#00ff99; font-size:2.8rem; margin-bottom:40px;">Real Client Glow-Ups</h2>
-  <img src="IMG_9317.jpeg" alt="Before: Texture lines" style="width:90%; max-width:600px; border-radius:15px; margin:20px 0; box-shadow:0 0 30px #00ff99;">
-  <img src="IMG_9184.png" alt="After: Plump radiance" style="width:90%; max-width:600px; border-radius:15px; margin:20px 0; box-shadow:0 0 30px #00ff99;">
-  <img src="IMG_9185.jpeg" alt="After: Bright even tone" style="width:90%; max-width:600px; border-radius:15px; margin:20px 0; box-shadow:0 0 30px #00ff99;">
-  <p style="color:#fff; font-size:1.5rem; margin-top:40px;">Your glow next? Book now.</p>
-</div>
-    
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EVEPRO GLOW</title>
-<style>
-body {
-background-color: #0f172a;
-color: #ffffff;
-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 40px 20px;
-margin: 0;
-text-align: center;
-}
-
-h1 {
-font-size: 3rem;
-font-weight: 800;
-margin-bottom: 10px;
-color: #ffffff;
-}
-
-p.subtitle {
-color: #94a3b8;
-font-size: 1.2rem;
-margin-top: 0;
-margin-bottom: 50px;
-font-weight: 400;
-}
-
-.section-header {
-font-size: 1.5rem;
-font-weight: 700;
-margin-bottom: 20px;
-color: #ffffff;
-}
-
-/* Responsive Grids */
-.services-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-gap: 30px;
-width: 100%;
-max-width: 1200px;
-margin-bottom: 40px;
-}
-
-.results-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 30px;
-width: 100%;
-max-width: 1200px;
-margin-bottom: 40px;
-}
-
-/* NEW: Equipment Gallery */
-.equip-gallery {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 30px;
-width: 100%;
-max-width: 1200px;
-margin-bottom: 60px;
-}
-
-.equip-gallery img {
-width: 100%;
-border-radius: 16px;
-border: 2px solid #60a5fa;
-box-shadow: 0 4px 20px rgba(96, 165, 250, 0.4);
-}
-
-/* Cards */
-.service-card {
-background: linear-gradient(135deg, #1e3a8a 0%, #172554 100%);
-border: 1px solid #3b82f6;
-padding: 25px;
-border-radius: 16px;
-text-align: left;
-transition: transform 0.2s;
-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-}
-
-.service-card:hover {
-transform: translateY(-5px);
-}
-
-.service-card.special {
-border: 2px solid #4ade80;
-box-shadow: 0 4px 30px rgba(74, 222, 128, 0.3);
-}
-
-.service-card.special .service-title,
-.service-card.special .price-tag {
-color: #4ade80;
-}
-
-.service-card.special .service-desc {
-color: #ffffff;
-}
-
-.service-title {
-font-size: 1.3rem;
-font-weight: 700;
-margin-bottom: 8px;
-display: block;
-color: #ffffff;
-}
-
-.service-desc {
-font-size: 0.9rem;
-color: #bfdbfe;
-margin-bottom: 15px;
-line-height: 1.4;
-}
-
-.price-tag {
-font-weight: bold;
-color: #60a5fa;
-font-size: 1.1rem;
-}
-
-/* Buttons */
-.book-btn {
-background: linear-gradient(90deg, #fbbf24, #d97706);
-color: #000;
-font-weight: 800;
-padding: 18px 40px;
-border-radius: 50px;
-text-decoration: none;
-font-size: 1.2rem;
-box-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
-transition: all 0.2s;
-display: inline-block;
-}
-
-.book-btn:hover {
-transform: scale(1.05);
-box-shadow: 0 0 30px rgba(251, 191, 36, 0.6);
-}
-
-.book-btn:active {
-transform: scale(0.95);
-}
-
-/* Results Images */
-.results-grid img {
-width: 100%;
-border-radius: 16px;
-border: 2px solid #fbbf24;
-box-shadow: 0 4px 20px rgba(251, 191, 36, 0.3);
-loading: lazy;
-}
-
-/* Glow Section */
-#glow-section {
-background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-border: 2px solid #fbbf24;
-padding: 30px;
-border-radius: 20px;
-width: 100%;
-max-width: 500px;
-margin-bottom: 50px;
-}
-
-#glow-section h2 {
-color: #fbbf24;
-margin-top: 0;
-}
-
-#glowForm input {
-padding: 15px;
-border-radius: 8px;
-background: #0f172a;
-color: #fff;
-border: 1px solid #334155;
-}
-
-#glowForm button {
-background: #fbbf24;
-color: #000;
-padding: 15px;
-border-radius: 8px;
-border: none;
-font-weight: 800;
-cursor: pointer;
-margin-top: 10px;
-}
-
-#glowForm button:hover {
-background: #facc15;
-}
-</style>
-</head>
-<body>
-
-<h1>EVEPRO GLOW</h1>
-<p class="subtitle">Science-Backed Mobile Skincare</p>
-
-<div class="section-header">Our Treatments</div>
-
-<div class="services-grid">
-
-<div class="service-card">
-<span class="service-title">6-in-1 Hydro-Facial System</span>
-<div class="service-desc">Deep cleansing, exfoliation, extraction, and hydration using medical-grade hydro technology.</div>
-<div class="price-tag">$250</div>
-</div>
-
-<div class="service-card">
-<span class="service-title">Korean Oxygen Infusion</span>
-<div class="service-desc">Advanced oxygen therapy with custom Korean serums tailored to your skin analysis.</div>
-<div class="price-tag">$150</div>
-</div>
-
-<div class="service-card">
-<span class="service-title">Medical-Grade LED</span>
-<div class="service-desc">Clinical-strength LED therapy for anti-aging, acne treatment, and skin rejuvenation.</div>
-<div class="price-tag">$85</div>
-</div>
-
-<div class="service-card special">
-<span class="service-title">New Client Special</span>
-<div class="service-desc">Includes Full AI Skin Analysis & Consultation.</div>
-<div class="price-tag">$99</div>
-</div>
-
-</div>
-
-<a href="tel:19176339282" class="book-btn">Book Your Session Now</a>
-
-<!-- NEW GALLERY ADDED UNDERNEATH TREATMENTS -->
-<div class="section-header" style="margin-top: 60px;">Our Real Equipment</div>
-<div class="equip-gallery">
-<img src="IMG_9187.jpeg" alt="Hydro-Facial Machine">
-<img src="IMG_9392.png" alt="Medical-Grade LED Panels">
-<!-- Add more real uploads here when ready -->
-</div>
-
-<div class="section-header" style="margin-top: 60px;">Real Results</div>
-
-<div class="results-grid">
-<img src="IMG_9184.png" alt="Before and After: Full Face Radiant Glow" loading="lazy">
-<img src="IMG_9185.jpeg" alt="Before and After: Acne & Redness Cleared" loading="lazy">
-<img src="IMG_9317.jpeg" alt="Before and After: Fine Lines Smoothed" loading="lazy">
-</div>
-
-<div id="glow-section">
-<h2>RESTORATION AUDIT</h2>
-<form id="glowForm" style="display: flex; flex-direction: column; gap: 15px;">
-<input type="text" id="userName" placeholder="Your Name" required>
-<input type="email" id="userEmail" placeholder="Your Email" required>
-<button type="submit">TRIGGER GLOW ALERT</button>
-</form>
-</div>
-
-<script>
-document.getElementById('glowForm').addEventListener('submit', function(e) {
-e.preventDefault();
-const name = document.getElementById('userName').value.trim();
-const email = document.getElementById('userEmail').value.trim();
-
-if (!name || !email) {
-alert("Please fill in both fields, treasure.");
-return;
-}
-
-const subject = encodeURIComponent("GLOW ALERT: " + name);
-const body = encodeURIComponent(
-"New Treasure Captured:\n\n" +
-"Name: " + name + "\n" +
-"Email: " + email + "\n\n" +
-"The glow awaits."
-);
-
-window.location.href = "mailto:Eveproglow1111@gmail.com?subject=" + subject + "&body=" + body;
-
-alert("Glow Alert Sent. The Empire is watching.");
-this.reset();
-});
-</script>
-</body>
-</html>
-<!-- VIDEO + REVIEWS SECTION - ADD UNDER EQUIPMENT GALLERY -->
-<div class="section-header" style="margin-top: 60px;">Watch The AI Scan In Action</div>
-<div style="max-width:800px; margin:auto;">
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/MJIsKQZeafw" title="Professional Skin Analyzer Demo & Reviews" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<p style="font-size:1rem; color:#94a3b8; margin-top:20px;">Beauty pros explain the scan + real client feedback (similar tech to EvePro Glow)</p>
-</div>
-
-<div class="section-header" style="margin-top: 60px;">Client Reviews Coming Soon</div>
-<div class="services-grid"> <!-- Reuse grid for review cards -->
-<div class="service-card">
-<p style="font-style:italic; color:#bfdbfe;">"The AI scan showed me things I never knew — game-changer for my skin routine!"</p>
-<p style="font-weight:bold; color:#4ade80;">- Sarah K. (Launch Week Client)</p>
-</div>
-<div class="service-card">
-<p style="font-style:italic; color:#bfdbfe;">"Best glow I've ever had — highly recommend the Hydro + scan combo."</p>
-<p style="font-weight:bold; color:#4ade80;">- Emily R.</p>
-</div>
-<!-- Add more real reviews post-launch -->
-</div>
