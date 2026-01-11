@@ -1,208 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="EveProGlow | Private Oxygen Skin Therapy on Long Island’s North Shore. Clinical-grade treatments by referral only.">
-    
-    <title>EveProGlow | Private Oxygen Skin Therapy</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
-    
-    <style>
-        /* 1. BACKGROUND SETUP (Vercel Optimized) */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Lato', sans-serif;
-            text-align: center;
-            color: #333;
-            min-height: 100vh;
-            /* LOOKS FOR LOCAL FILE named 'bg.jpg' */
-            background: url('bg.jpg') no-repeat center center fixed;
-            background-size: cover; 
-            position: relative;
-        }
+<style>
+    /* 1. IMPORT PREMIUM FONTS (The biggest difference maker) */
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap');
 
-        /* 2. WHITE MIST OVERLAY (Essential for readability over the photo) */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(255, 255, 255, 0.45); /* Adjust opacity if needed */
-            z-index: -1;
-        }
+    :root {
+        --primary: #D4AF37; /* Muted Gold for luxury */
+        --dark: #0a0a0a;    /* Rich Black, not default black */
+        --light: #f4f4f4;   /* Off-white, easier on eyes */
+    }
 
-        header { padding: 80px 20px 50px; }
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Lato', sans-serif; /* Clean body text */
+        background: url('./assets/bg.jpg') center center / cover no-repeat fixed;
+        background-color: var(--dark); /* Fallback */
+        color: var(--light);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        text-align: center;
+    }
 
-        .logo { 
-            font-family: 'Playfair Display', serif; 
-            font-size: 3.5rem; 
-            color: #1a4a1a; /* Deep Forest Green */
-            margin: 0; 
-            letter-spacing: -1px;
-            font-weight: 600;
-        }
+    /* Dark Overlay so text pops */
+    body::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(0, 0, 0, 0.65); /* 65% darkness for high contrast */
+        z-index: -1;
+    }
 
-        .tagline {
-            font-size: 1rem;
-            color: #222;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-top: 10px;
-            font-weight: 400;
-        }
+    /* 2. TYPOGRAPHY HIERARCHY */
+    h1 {
+        font-family: 'Playfair Display', serif; /* Elegant Serif Header */
+        font-size: 3.5rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-bottom: 0.5rem;
+        color: #ffffff;
+        text-transform: uppercase;
+    }
 
-        /* 3. THE GLASS MENU CARD */
-        .menu-container {
-            max-width: 700px;
-            margin: 0 auto 100px;
-            /* Frosted Glass Effect */
-            background: rgba(255, 255, 255, 0.88); 
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            padding: 60px 40px;
-            border-radius: 4px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            text-align: left;
-            border: 1px solid rgba(255,255,255,0.6);
-        }
+    p.subtitle {
+        font-size: 1.25rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+        margin-bottom: 2.5rem;
+        color: rgba(255, 255, 255, 0.9);
+        max-width: 600px;
+        line-height: 1.6;
+    }
 
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            color: #1a4a1a;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 15px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
+    /* 3. LUXURY BUTTONS */
+    .btn-main {
+        background-color: transparent;
+        border: 2px solid var(--primary);
+        color: var(--primary);
+        padding: 15px 40px;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
 
-        .service-item { margin-bottom: 40px; }
+    .btn-main:hover {
+        background-color: var(--primary);
+        color: var(--dark);
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.5); /* Gold glow */
+    }
 
-        .service-header {
-            display: flex;
-            justify-content: space-between;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #222;
-            margin-bottom: 5px;
-        }
-
-        .price { color: #d4af37; /* Luxury Gold */ font-style: italic; }
-
-        .desc {
-            font-size: 0.95rem;
-            color: #555;
-            line-height: 1.5;
-            font-weight: 300;
-        }
-
-        /* 4. CALL TO ACTION */
-        .cta-container {
-            text-align: center;
-            margin-top: 60px;
-            padding-top: 40px;
-            border-top: 1px solid #eee;
-        }
-
-        .cta-btn {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
-            color: #1a4a1a;
-            text-decoration: none;
-            border-bottom: 1px solid #1a4a1a;
-            padding-bottom: 4px;
-            transition: opacity 0.3s;
-        }
-        .cta-btn:hover { opacity: 0.6; }
-
-        footer { padding: 40px; color: #333; font-size: 0.8rem; text-shadow: 0 0 5px rgba(255,255,255,0.8); }
-
-        /* Mobile Adjustments */
-        @media (max-width: 600px) {
-            .menu-container { margin: 0 15px 80px; padding: 40px 20px; }
-            .service-header { flex-direction: column; }
-            .price { margin-top: 5px; font-size: 1.2rem; }
-            .logo { font-size: 2.8rem; }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1 class="logo">EveProGlow</h1>
-        <p class="tagline">Private Oxygen Skin Therapy</p>
-    </header>
-
-    <div class="menu-container">
-        
-        <h2 class="section-title">Signature Infusions</h2>
-
-        <div class="service-item">
-            <div class="service-header">
-                <span>EveProGlow Signature</span>
-                <span class="price">$350</span>
-            </div>
-            <div class="desc">
-                75 Min • The ultimate protocol. Full AI skin analysis, extended oxygen infusion, custom vitamin boosters, and lymphatic massage.
-            </div>
-        </div>
-
-        <div class="service-item">
-            <div class="service-header">
-                <span>Oxygen + LED Renewal</span>
-                <span class="price">$275</span>
-            </div>
-            <div class="desc">
-                60 Min • Signature oxygen therapy paired with targeted LED light treatment to reduce inflammation and boost collagen.
-            </div>
-        </div>
-
-        <div class="service-item">
-            <div class="service-header">
-                <span>The Oxygen Glow</span>
-                <span class="price">$225</span>
-            </div>
-            <div class="desc">
-                45 Min • Clinical-grade infusion of pure oxygen and hyaluronic acid. Instant hydration and glass-skin radiance.
-            </div>
-        </div>
-
-        <h2 class="section-title" style="margin-top: 70px;">Enhancements</h2>
-
-        <div class="service-item">
-            <div class="service-header">
-                <span>Dermaplaning Exfoliation</span>
-                <span class="price">+ $50</span>
-            </div>
-            <div class="desc">Precision removal of vellus hair and dead skin cells for flawless finish.</div>
-        </div>
-
-        <div class="service-item">
-            <div class="service-header">
-                <span>Peptide Eye Lift</span>
-                <span class="price">+ $45</span>
-            </div>
-            <div class="desc">Targeted oxygen infusion to depuff and brighten the delicate eye area.</div>
-        </div>
-
-        <div class="cta-container">
-            <p style="margin-bottom: 25px; font-style: italic; color: #666;">Appointments by referral only</p>
-            
-            <a href="sms:+19176339282?body=Hi%20EveProGlow%2C%20I%20would%20like%20to%20inquire%20about%20booking%20a%20private%20session." class="cta-btn">
-                Text (917) 633-9282
-            </a>
-            
-            <p style="margin-top: 20px; font-size: 0.85rem; color: #777;">Travel included within North Shore area.</p>
-        </div>
-
-    </div>
-
-    <footer>
-        © 2026 EveProGlow | Private Skin Therapy
-    </footer>
-
-</body>
-</html>
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+        h1 { font-size: 2.5rem; }
+        p.subtitle { padding: 0 20px; font-size: 1rem; }
+    }
+</style>
