@@ -1,81 +1,246 @@
-<style>
-    /* 1. IMPORT PREMIUM FONTS (The biggest difference maker) */
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVEPRO GLOW | Elite Mobile Aesthetics</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    :root {
-        --primary: #D4AF37; /* Muted Gold for luxury */
-        --dark: #0a0a0a;    /* Rich Black, not default black */
-        --light: #f4f4f4;   /* Off-white, easier on eyes */
-    }
+    <style>
+        /* --- CORE VARIABLES --- */
+        :root {
+            --gold: #D4AF37;
+            --black: #050505;
+            --charcoal: #121212;
+            --white: #ffffff;
+            --text-gray: #b0b0b0;
+        }
 
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Lato', sans-serif; /* Clean body text */
-        background: url('./assets/bg.jpg') center center / cover no-repeat fixed;
-        background-color: var(--dark); /* Fallback */
-        color: var(--light);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        text-align: center;
-    }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            background-color: var(--black);
+            color: var(--white);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
 
-    /* Dark Overlay so text pops */
-    body::before {
-        content: '';
-        position: absolute;
-        top: 0; left: 0; right: 0; bottom: 0;
-        background: rgba(0, 0, 0, 0.65); /* 65% darkness for high contrast */
-        z-index: -1;
-    }
+        /* --- TYPOGRAPHY --- */
+        h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--gold); margin-bottom: 1rem; }
+        h1 { font-size: 3.5rem; letter-spacing: -1px; line-height: 1.1; }
+        h2 { font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; text-align: center; margin-bottom: 3rem; }
+        p { color: var(--text-gray); font-size: 1.1rem; margin-bottom: 1.5rem; }
+        a { text-decoration: none; transition: 0.3s; }
 
-    /* 2. TYPOGRAPHY HIERARCHY */
-    h1 {
-        font-family: 'Playfair Display', serif; /* Elegant Serif Header */
-        font-size: 3.5rem;
-        font-weight: 700;
-        letter-spacing: 2px;
-        margin-bottom: 0.5rem;
-        color: #ffffff;
-        text-transform: uppercase;
-    }
+        /* --- BUTTONS --- */
+        .btn {
+            display: inline-block;
+            padding: 18px 45px;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-top: 20px;
+            background: transparent;
+        }
+        .btn:hover { background: var(--gold); color: var(--black); box-shadow: 0 0 30px rgba(212, 175, 55, 0.4); }
 
-    p.subtitle {
-        font-size: 1.25rem;
-        font-weight: 300;
-        letter-spacing: 1px;
-        margin-bottom: 2.5rem;
-        color: rgba(255, 255, 255, 0.9);
-        max-width: 600px;
-        line-height: 1.6;
-    }
+        /* --- NAV --- */
+        nav {
+            position: fixed; top: 0; width: 100%;
+            background: rgba(5, 5, 5, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 20px 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            z-index: 1000;
+        }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: var(--white); }
+        .logo span { color: var(--gold); }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a { color: var(--white); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
 
-    /* 3. LUXURY BUTTONS */
-    .btn-main {
-        background-color: transparent;
-        border: 2px solid var(--primary);
-        color: var(--primary);
-        padding: 15px 40px;
-        font-size: 1rem;
-        font-weight: 700;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        text-decoration: none;
-        transition: all 0.3s ease;
-    }
+        /* --- HERO --- */
+        header {
+            height: 100vh;
+            background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.5)), url('https://www.lizzieinlace.com/wp-content/uploads/2023/08/1-at-home-spa-day.jpg');
+            background-size: cover; background-position: center;
+            display: flex; align-items: center; padding: 0 10%;
+        }
+        .hero-content { max-width: 700px; border-left: 5px solid var(--gold); padding-left: 40px; }
 
-    .btn-main:hover {
-        background-color: var(--primary);
-        color: var(--dark);
-        box-shadow: 0 0 20px rgba(212, 175, 55, 0.5); /* Gold glow */
-    }
+        /* --- FEATURES --- */
+        .features { padding: 80px 10%; background: var(--charcoal); display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .feature-box { background: var(--black); padding: 40px; border: 1px solid #222; text-align: center; }
+        .feature-box i { font-size: 3rem; color: var(--gold); margin-bottom: 20px; }
 
-    /* Mobile responsiveness */
-    @media (max-width: 768px) {
-        h1 { font-size: 2.5rem; }
-        p.subtitle { padding: 0 20px; font-size: 1rem; }
-    }
-</style>
+        /* --- RESULTS TIMELINE (NEW) --- */
+        .results-section { padding: 100px 10%; background: var(--black); }
+        .timeline-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        .timeline-box { padding: 30px; border-left: 2px solid var(--gold); }
+        .timeline-box h3 { color: var(--white); font-size: 1.5rem; }
+        .timeline-box strong { color: var(--gold); }
+
+        /* --- MENU --- */
+        .menu-section { padding: 100px 5%; background: var(--charcoal); }
+        .menu-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; max-width: 1400px; margin: 0 auto; }
+        .menu-item { background: #0f0f0f; border: 1px solid #333; padding: 40px; position: relative; }
+        .price-tag { font-size: 2.5rem; color: var(--gold); font-family: 'Playfair Display', serif; display: block; }
+        .treatment-details li { list-style: none; border-bottom: 1px solid #222; padding: 10px 0; color: #999; }
+
+        /* --- TECH SPECS --- */
+        .tech-specs { padding: 100px 10%; display: flex; flex-wrap: wrap; gap: 50px; align-items: center; }
+        .tech-image { flex: 1; height: 500px; background: url('https://glownar.com/cdn/shop/products/2_1080x_bdb981ad-5dab-43e1-bc6d-a6ab8bd09be1.webp?v=1759857018&width=1445') center/cover; border: 1px solid var(--gold); }
+        .tech-text { flex: 1; }
+
+        /* --- GALLERY --- */
+        .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); height: 350px; }
+        .gallery-img { height: 100%; background-size: cover; background-position: center; position: relative; }
+
+        /* --- FOOTER --- */
+        footer { padding: 60px 5%; text-align: center; border-top: 1px solid #333; color: #666; }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .timeline-grid, .tech-specs, .gallery-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">EVEPRO <span>GLOW</span></div>
+        <div class="nav-links">
+            <a href="#results">Results</a>
+            <a href="#menu">Menu</a>
+            <a href="#technology">Technology</a>
+            <a href="sms:5167243208" style="color:var(--gold); border:1px solid var(--gold); padding: 5px 15px;">Book Now</a>
+        </div>
+    </nav>
+
+    <header>
+        <div class="hero-content">
+            <span style="color:var(--gold); text-transform:uppercase; letter-spacing:4px;">The Future of Mobile Skincare</span>
+            <h1>Medical Grade.<br>Hydrogen Oxygen.<br>Delivered.</h1>
+            <p>We bring the clinic to you. Experience the O2toDerm infusion system in the comfort of your home. No traffic. No waiting rooms. Just results.</p>
+            <a href="#menu" class="btn">View Treatments</a>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="feature-box">
+            <i class="fas fa-truck"></i>
+            <h3>We Come To You</h3>
+            <p>Full setup and breakdown in your home. We bring the bed, the machine, and the ambiance.</p>
+        </div>
+        <div class="feature-box">
+            <i class="fas fa-atom"></i>
+            <h3>Hydrogen Technology</h3>
+            <p>O2toDerm converts purified water into hydrogen & oxygen ions for deep cellular repair.</p>
+        </div>
+        <div class="feature-box">
+            <i class="fas fa-user-md"></i>
+            <h3>Clinical Results</h3>
+            <p>AI Skin Analysis ensures every treatment is mathematically tailored to your skin.</p>
+        </div>
+    </section>
+
+    <section class="results-section" id="results">
+        <h2>What To Expect</h2>
+        <div class="timeline-grid">
+            <div class="timeline-box">
+                <h3>01. The First Session</h3>
+                <p><strong>Instant Radiance:</strong> You will see an immediate "glass skin" effect—visibly brighter and plumper right after the session.</p>
+                <p><strong>Reduced Redness:</strong> Cooling purified oxygen instantly calms inflammation, ideal for sensitive skin.</p>
+                <p><strong>The "Event Glow":</strong> Typically lasts 4 to 7 days.</p>
+            </div>
+            <div class="timeline-box">
+                <h3>02. Cumulative Effects</h3>
+                <p><strong>Collagen Stimulation:</strong> Frequent treatments (every 1–2 weeks) progressively stimulate elastin to reduce fine lines.</p>
+                <p><strong>Acne Control:</strong> High-concentration oxygen creates an environment where bacteria cannot thrive.</p>
+                <p><strong>Cellular Repair:</strong> Anion therapy neutralizes free radicals, improving tone over time.</p>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:40px;">
+            <p style="color:var(--gold);">Recommended 2026 Schedule: 6 Sessions to "Jumpstart" Repair.</p>
+        </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+        <h2>Treatment Menu</h2>
+        <div class="menu-container">
+            <div class="menu-item">
+                <h3>Renewal & Texture</h3>
+                <span class="price-tag">$189</span>
+                <p>Ideal for first-time clients needing a reset.</p>
+                <ul class="treatment-details">
+                    <li>Hydrogen Deep Cleanse</li>
+                    <li>Oxygen Infusion</li>
+                    <li>Retinol Boost</li>
+                </ul>
+                <a href="sms:5167243208" class="btn" style="width:100%; text-align:center; font-size:0.8rem;">Book This</a>
+            </div>
+
+            <div class="menu-item" style="border: 1px solid var(--gold);">
+                <span style="background:var(--gold); color:black; padding:2px 10px; font-size:0.7rem; font-weight:bold; text-transform:uppercase;">Most Popular</span>
+                <br><br>
+                <h3>Signature Fusion</h3>
+                <span class="price-tag">$229</span>
+                <p>The complete "Glass Skin" Korean Protocol.</p>
+                <ul class="treatment-details">
+                    <li>Full Hydrogen-Oxygen Cycle</li>
+                    <li>Oxygen Dome Therapy</li>
+                    <li>AI Skin Analysis</li>
+                </ul>
+                <a href="sms:5167243208" class="btn" style="width:100%; text-align:center; background:var(--gold); color:black; font-size:0.8rem;">Book This</a>
+            </div>
+            
+             <div class="menu-item">
+                <h3>Anti-Aging Firming</h3>
+                <span class="price-tag">$219</span>
+                <p>Focus on lift, tightness, and collagen.</p>
+                <ul class="treatment-details">
+                    <li>Radio Frequency (RF) Lift</li>
+                    <li>Medical LED Therapy</li>
+                    <li>Peptide Serum Infusion</li>
+                </ul>
+                <a href="sms:5167243208" class="btn" style="width:100%; text-align:center; font-size:0.8rem;">Book This</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="tech-specs" id="technology">
+        <div class="tech-image"></div>
+        <div class="tech-text">
+            <h2>The Science</h2>
+            <p>Our <strong>O2toDerm H2O2 System</strong> is not a standard facial steamer. It uses a high-pressure generator to separate purified water into Hydrogen and Oxygen ions.</p>
+            <ul>
+                <li style="margin-bottom:10px; color:var(--gold);"><strong>+ H2O2 Spray:</strong> Deep pore flushing</li>
+                <li style="margin-bottom:10px; color:var(--gold);"><strong>+ Bipolar RF:</strong> Collagen stimulation</li>
+                <li style="margin-bottom:10px; color:var(--gold);"><strong>+ Cold Hammer:</strong> Pores constriction</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="gallery-grid">
+        <div class="gallery-img" style="background-image: url('https://m.media-amazon.com/images/I/511TS3Z76uL._AC_UF1000,1000_QL80_.jpg');"></div>
+        <div class="gallery-img" style="background-image: url('https://m.media-amazon.com/images/S/aplus-media-library-service-media/f6eca584-0e59-414a-a28f-b2899948c067.__CR0,0,600,450_PT0_SX600_V1___.jpg');"></div>
+        <div class="gallery-img" style="background-image: url('https://glownar.com/cdn/shop/products/2_1080x_bdb981ad-5dab-43e1-bc6d-a6ab8bd09be1.webp?v=1759857018&width=1445');"></div>
+        <div class="gallery-img" style="background-image: url('https://shineyourlightblog.com/wp-content/uploads/2026/01/Tips-for-Maintaining-a-Luxury-Spa-at-Home.webp');"></div>
+    </section>
+
+    <footer>
+        <div class="logo">EVEPRO <span>GLOW</span></div>
+        <br>
+        <p>&copy; 2026 EVEPRO SERVICES LLC. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
