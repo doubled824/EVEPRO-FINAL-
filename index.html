@@ -1,241 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EVEPRO GLOW | Elite Mobile Aesthetics</title>
+<meta name="description" content="Eve Pro Glow: Elite Mobile Aesthetics & Hydro-Facial System. Private, invite-only skincare services in Great Neck and Long Island.">
+<meta name="keywords" content="Hydro-facial Great Neck, Mobile Skincare Long Island, Korean Oxygen Infusion, Medical LED therapy, Eve Pro Glow">
+<meta name="robots" content="index, follow">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+<style>
+:root {
+  --gold: #D4AF37;
+  --black: #050505;
+  --charcoal: #121212;
+  --white: #ffffff;
+  --text-gray: #b0b0b0;
+}
 
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
+body {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  line-height: 1.8;
+  overflow-x: hidden;
+}
 
+h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; color: var(--gold); margin-bottom: 1rem; }
+h1 { font-size: 3.5rem; letter-spacing: -1px; line-height: 1.1; }
+h2 { font-size: 2.2rem; text-transform: uppercase; letter-spacing: 2px; text-align: center; margin-bottom: 3rem; }
+p { color: var(--text-gray); font-size: 1.1rem; margin-bottom: 1.5rem; }
+a { text-decoration: none; transition: 0.3s; }
 
+.btn {
+  display: inline-block;
+  padding: 18px 45px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  background: transparent;
+  cursor: pointer;
+}
+.btn:hover { background: var(--gold); color: var(--black); box-shadow: 0 0 30px rgba(212, 175, 55, 0.4); }
 
+nav {
+  position: fixed; top: 0; width: 100%;
+  background: rgba(5, 5, 5, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  padding: 20px 5%;
+  display: flex; justify-content: space-between; align-items: center;
+  z-index: 1000;
+}
+.logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: var(--white); }
+.logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 30px; }
+.nav-links a { color: var(--white); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
 
+header {
+  height: 100vh;
+  background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2070&auto=format&fit=crop');
+  background-size: cover; background-position: center;
+  display: flex; align-items: center; padding: 0 10%;
+}
+.hero-content { max-width: 700px; border-left: 5px solid var(--gold); padding-left: 40px; }
 
+.promo-container {
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+  border-top: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
+  padding: 60px 20px;
+  text-align: center;
+}
+.promo-title { color: var(--gold); font-size: 2rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 2px; }
+.promo-text { font-size: 1.1rem; color: #e0e0e0; max-width: 700px; margin: 0 auto 30px auto; }
+.promo-highlight { font-weight: bold; color: var(--white); border-bottom: 1px solid var(--gold); }
 
+.features { padding: 80px 10%; background: var(--charcoal); display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+.feature-box { background: var(--black); padding: 40px; border: 1px solid #222; text-align: center; }
+.feature-box i { font-size: 3rem; color: var(--gold); margin-bottom: 20px; }
 
+.results-section { padding: 100px 10%; background: var(--black); }
+.timeline-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+.timeline-box { padding: 30px; border-left: 2px solid var(--gold); background: #0a0a0a; }
+.timeline-box h3 { color: var(--white); font-size: 1.5rem; margin-bottom: 20px;}
+.timeline-box strong { color: var(--gold); }
 
+.menu-section { padding: 100px 5%; background: var(--charcoal); }
+.menu-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; max-width: 1400px; margin: 0 auto; }
+.menu-item { background: #0f0f0f; border: 1px solid #333; padding: 40px; position: relative; }
+.price-tag { font-size: 2.5rem; color: var(--gold); font-family: 'Playfair Display', serif; display: block; margin-top: 10px; }
+.treatment-details li { list-style: none; border-bottom: 1px solid #222; padding: 10px 0; color: #999; }
 
+.tech-specs { padding: 100px 10%; display: flex; flex-wrap: wrap; gap: 50px; align-items: center; }
+.tech-image { flex: 1; min-height: 500px; background: url('https://m.media-amazon.com/images/I/61N+x+u+q+L._AC_SL1500_.jpg') center/contain no-repeat #111; border: 1px solid #333; }
+.tech-text { flex: 1; }
 
+.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); height: 350px; }
+.gallery-img { height: 100%; background-size: cover; background-position: center; position: relative; border-right: 1px solid #000; }
+.gallery-overlay {
+  position: absolute; bottom: 0; left: 0; width: 100%; padding: 15px;
+  background: rgba(0,0,0,0.8); color: var(--gold); text-align: center;
+}
 
+footer { padding: 60px 5%; text-align: center; border-top: 1px solid #333; color: #666; background: var(--black); }
 
+.whatsapp-float {
+  position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px;
+  background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center;
+  font-size: 30px; box-shadow: 2px 2px 3px #999; z-index: 100;
+  display: flex; align-items: center; justify-content: center;
+}
 
+@media (max-width: 768px) {
+  h1 { font-size: 2.5rem; }
+  .timeline-grid, .tech-specs, .gallery-grid { grid-template-columns: 1fr; }
+  .gallery-grid { height: auto; }
+  .gallery-img { height: 250px; }
+  .nav-links { display: none; }
+}
+</style>
+</head>
+<body>
 
+<nav>
+  <div class="logo">EVEPRO <span>GLOW</span></div>
+  <div class="nav-links">
+    <a href="#results">Results Timeline</a>
+    <a href="#menu">Menu</a>
+    <a href="#technology">Technology</a>
+    <a href="sms:5167243208" style="color:var(--gold); border:1px solid var(--gold); padding: 5px 15px;">Book Now</a>
+  </div>
+</nav>
 
+<header>
+  <div class="hero-content">
+    <span style="color:var(--gold); text-transform:uppercase; letter-spacing:4px; font-weight:bold; font-size:1.1rem;">Your Private Glow Ritual</span>
+    <h1>Radiance.<br>Delivered.<br>To Your Door.</h1>
+    <p>Imagine clinic-level results without leaving your home. No crowded waiting rooms. No rush-hour traffic. Just you, relaxed in your favorite robe, while we bring medical-grade hydrogen oxygen therapy — and that effortless "glass skin" glow — straight to you.</p>
+    <a href="#menu" class="btn">Discover Your Treatment</a>
+    <p style="margin-top:20px; font-size:0.9rem; color:#aaa;">Limited appointments available this week • Great Neck & Long Island</p>
+  </div>
+</header>
 
+<section class="promo-container">
+  <h2 class="promo-title">✨ Exclusive AI Skin Analysis Offer</h2>
+  <p class="promo-text">
+    Take the guesswork out of your glow. Book your <span class="promo-highlight">Medical-Grade AI Skin Scan</span> for just <span class="promo-highlight">$99</span>.
+    <br><br>
+    <strong>The best part?</strong> Your $99 is 100% reimbursed as a credit toward your first treatment!
+  </p>
+  <a href="sms:5167243208" class="btn">Reserve Your Scan</a>
+</section>
 
-  
-EVEPRO GLOW
-  
-    
-RESULTS TIMELINE
-    
-MENU
-    
-TECHNOLOGY
-    
-BOOK NOW
-  
+<section class="features">
+  <div class="feature-box">
+    <i class="fas fa-truck"></i>
+    <h3>We Come To You</h3>
+    <p>Full setup and breakdown in your home. We bring the bed, the machine, and the ambiance.</p>
+  </div>
+  <div class="feature-box">
+    <i class="fas fa-atom"></i>
+    <h3>Hydrogen Technology</h3>
+    <p>Converts purified water into hydrogen & oxygen ions for deep cellular repair.</p>
+  </div>
+  <div class="feature-box">
+    <i class="fas fa-user-md"></i>
+    <h3>Clinical Results</h3>
+    <p>AI Skin Analysis ensures every treatment is mathematically tailored to your skin.</p>
+  </div>
+</section>
 
+<section class="results-section" id="results">
+  <h2>The 2026 Transformation</h2>
+  <p style="text-align:center; max-width:800px; margin:0 auto 40px;">The OtoDerm Oxygen Dome Facial delivers a two-phase transformation: an immediate cosmetic "glow" followed by cumulative physiological improvements.</p>
 
+  <div class="timeline-grid">
+    <div class="timeline-box">
+      <h3>01. The First Time</h3>
+      <p><strong>Instant Radiance:</strong> You will see an immediate "glass skin" effect—skin appears visibly brighter, plumper, and hydrated.</p>
+      <p><strong>Reduced Redness:</strong> Cooling purified oxygen instantly calms inflammation, ideal for sensitive skin.</p>
+      <p><strong>Longevity:</strong> This initial "event glow" typically lasts between 4 to 7 days.</p>
+      <p><strong>Deeper Absorption:</strong> Serums applied immediately after will penetrate deeper into the dermis.</p>
+    </div>
+    <div class="timeline-box">
+      <h3>02. Each Time After</h3>
+      <p><strong>Collagen Stimulation:</strong> Frequent treatments (every 1–2 weeks) progressively stimulate elastin production to reduce fine lines.</p>
+      <p><strong>Acne Control:</strong> High-concentration oxygen prevents bacteria from thriving, leading to clearer skin.</p>
+      <p><strong>Cellular Regeneration:</strong> Anion therapy neutralizes free radicals, improving overall tone and texture.</p>
+    </div>
+  </div>
 
-  
-    THE FUTURE OF MOBILE SKINCARE
-    
-Medical Grade. Hydrogen Oxygen. Delivered.
-    
-We bring the clinic to you. Experience the OtoDerm infusion system in the comfort of your home. No traffic. No waiting rooms. Just results.
-    VIEW TREATMENTS
-  
+  <div style="text-align:center; margin-top:50px; padding:30px; border:1px solid var(--gold);">
+    <h3 style="margin-bottom:10px;">Recommended 2026 Schedule</h3>
+    <p style="color:var(--white);"><strong>Initial Phase:</strong> 1 treatment every 1–2 weeks (6 sessions total) to "jumpstart" cellular repair.</p>
+    <p style="color:var(--white);"><strong>Maintenance:</strong> 1 treatment every 4 weeks to sustain "glass skin" clarity.</p>
+  </div>
+</section>
 
+<section class="menu-section" id="menu">
+  <h2>Treatment Menu</h2>
+  <div class="menu-container">
+    <div class="menu-item">
+      <h3>Renewal & Texture</h3>
+      <span class="price-tag">$189</span>
+      <p>Ideal for first-time clients needing a reset.</p>
+      <ul class="treatment-details">
+        <li>Hydrogen Deep Cleanse</li>
+        <li>Oxygen Infusion</li>
+        <li>Retinol Boost</li>
+      </ul>
+      <a href="sms:5167243208" class="btn" style="width:100%; text-align:center; font-size:0.8rem;">Book This</a>
+    </div>
 
+    <div class="menu-item" style="border: 1px solid var(--gold);">
+      <span style="background:var(--gold); color:black; padding:2px 10px; font-size:0.7rem; font-weight:bold; text-transform:uppercase;">Most Popular</span>
+      <br><br>
+      <h3>Signature Fusion</h3>
+      <span class="price-tag">$229</span>
+      <p>The complete "Glass Skin" Korean Protocol.</p>
+      <ul class="treatment-details">
+        <li>Full Hydrogen-Oxygen Cycle</li>
+        <li>Oxygen Dome Therapy</li>
+        <li>AI Skin Analysis</li>
+      </ul>
+      <a href="sms:5167243208" class="btn" style="width:100%; text-align:center; background:var(--gold); color:black; font-size:0.8rem;">Book This</a>
+    </div>
 
-  
-✨ EXCLUSIVE AI SKIN ANALYSIS OFFER
-  
-    Take the guesswork out of your glow. Book your Medical-Grade AI Skin Scan for just $99.
-     
-    The best part? Your $99 is 100% reimbursed as a credit toward your first treatment!
-  
-  RESERVE YOUR SCAN
+    <div class="menu-item">
+      <h3>Anti-Aging Firming</h3>
+      <span class="price-tag">$219</span>
+      <p>Focus on lift, tightness, and collagen.</p>
+      <ul class="treatment-details">
+        <li>Radio Frequency (RF) Lift</li>
+        <li>Medical LED Therapy</li>
+        <li>Peptide Serum Infusion</li>
+      </ul>
+      <a href="sms:5167243208" class="btn" style="width:100%; text-align:center; font-size:0.8rem;">Book This</a>
+    </div>
+  </div>
+</section>
 
+<section class="tech-specs" id="technology">
+  <div class="tech-image"></div>
+  <div class="tech-text">
+    <h2>The Science</h2>
+    <p>Our <strong>OtoDerm H2O2 System</strong> is not a standard facial steamer. It uses a high-pressure generator to separate purified water into Hydrogen and Oxygen ions.</p>
+    <ul>
+      <li style="margin-bottom:10px; color:var(--gold);"><strong>+ H2O2 Spray:</strong> Deep pore flushing</li>
+      <li style="margin-bottom:10px; color:var(--gold);"><strong>+ Bipolar RF:</strong> Collagen stimulation</li>
+      <li style="margin-bottom:10px; color:var(--gold);"><strong>+ Cold Hammer:</strong> Pores constriction</li>
+    </ul>
+  </div>
+</section>
 
+<section class="gallery-grid">
+  <div class="gallery-img" style="background-image: url('https://m.media-amazon.com/images/I/511TS3Z76uL._AC_UF1000,1000_QL80_.jpg');">
+    <div class="gallery-overlay">AI Skin Analysis</div>
+  </div>
+  <div class="gallery-img" style="background-image: url('https://m.media-amazon.com/images/S/aplus-media-library-service-media/f6eca584-0e59-414a-a28f-b2899948c067.__CR0,0,600,450_PT0_SX600_V1___.jpg');">
+    <div class="gallery-overlay">Medical LED</div>
+  </div>
+  <div class="gallery-img" style="background-image: url('https://glownar.com/cdn/shop/products/2_1080x_bdb981ad-5dab-43e1-bc6d-a6ab8bd09be1.webp?v=1759857018&width=1445');">
+    <div class="gallery-overlay">OtoDerm System</div>
+  </div>
+  <div class="gallery-img" style="background-image: url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=2070&auto=format&fit=crop');">
+    <div class="gallery-overlay">Luxury Setup</div>
+  </div>
+</section>
 
-  
-    
-    
-We Come To You
-    
-Full setup and breakdown in your home. We bring the bed, the machine, and the ambiance.
-  
-  
-    
-    
-Hydrogen Technology
-    
-Converts purified water into hydrogen & oxygen ions for deep cellular repair.
-  
-  
-    
-    
-Clinical Results
-    
-AI Skin Analysis ensures every treatment is mathematically tailored to your skin.
-  
+<footer>
+  <div class="logo">EVEPRO <span>GLOW</span></div>
+  <br>
+  <p>&copy; 2026 EVEPRO SERVICES LLC. All Rights Reserved.</p>
+  <p>Licensed & Insured.</p>
+</footer>
 
+<a href="https://wa.me/15167243208" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
-
-  
-THE 2026 TRANSFORMATION
-  
-The OtoDerm Oxygen Dome Facial delivers a two-phase transformation: an immediate cosmetic "glow" followed by cumulative physiological improvements.
-
-  
-    
-      
-01. The First Time
-      
-Instant Radiance: You will see an immediate "glass skin" effect—skin appears visibly brighter, plumper, and hydrated.
-      
-Reduced Redness: Cooling purified oxygen instantly calms inflammation, ideal for sensitive skin.
-      
-Longevity: This initial "event glow" typically lasts between 4 to 7 days.
-      
-Deeper Absorption: Serums applied immediately after will penetrate deeper into the dermis.
-    
-    
-      
-02. Each Time After
-      
-Collagen Stimulation: Frequent treatments (every 1–2 weeks) progressively stimulate elastin production to reduce fine lines.
-      
-Acne Control: High-concentration oxygen prevents bacteria from thriving, leading to clearer skin.
-      
-Cellular Regeneration: Anion therapy neutralizes free radicals, improving overall tone and texture.
-    
-  
-
-  
-    
-Recommended 2026 Schedule
-    
-Initial Phase: 1 treatment every 1–2 weeks (6 sessions total) to "jumpstart" cellular repair.
-    
-Maintenance: 1 treatment every 4 weeks to sustain "glass skin" clarity.
-  
-
-
-
-  
-TREATMENT MENU
-  
-    
-      
-Renewal & Texture
-      
-$189
-      
-Ideal for first-time clients needing a reset.
-      
-        
-Hydrogen Deep Cleanse
-        
-Oxygen Infusion
-        
-Retinol Boost
-      
-      BOOK THIS
-    
-
-    
-      MOST POPULAR
-      
-
-      
-Signature Fusion
-      
-$229
-      
-The complete "Glass Skin" Korean Protocol.
-      
-        
-Full Hydrogen-Oxygen Cycle
-        
-Oxygen Dome Therapy
-        
-AI Skin Analysis
-      
-      BOOK THIS
-    
-
-    
-      
-Anti-Aging Firming
-      
-$219
-      
-Focus on lift, tightness, and collagen.
-      
-        
-Radio Frequency (RF) Lift
-        
-Medical LED Therapy
-        
-Peptide Serum Infusion
-      
-      BOOK THIS
-    
-  
-
-
-
-  
-
-  
-    
-THE SCIENCE
-    
-Our OtoDerm H2O2 System is not a standard facial steamer. It uses a high-pressure generator to separate purified water into Hydrogen and Oxygen ions.
-    
-      
-+ H2O2 Spray: Deep pore flushing
-      
-+ Bipolar RF: Collagen stimulation
-      
-+ Cold Hammer: Pores constriction
-    
-  
-
-
-
-  
-    
-AI Skin Analysis
-  
-  
-    
-Medical LED
-  
-  
-    
-OtoDerm System
-  
-  
-    
-Luxury Setup
-  
-
-
-
-  
-EVEPRO GLOW
-  
-  
-© 2026 EVEPRO SERVICES LLC. All Rights Reserved.
-  
-Licensed & Insured.
-
-
-
-  
-
-
-
-
-
+</body>
+</html>
