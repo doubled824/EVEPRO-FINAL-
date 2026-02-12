@@ -1,15 +1,16 @@
-<div style="background: #214C2F; color: #FBF9F4; text-align: center; padding: 10px; font-size: 14px; font-weight: 700;">
-  ✨ Only 5 spots left for mobile facials this week! 
-  <a href="booking.html" style="color: #A9CBA4; text-decoration: underline; margin-left: 10px;">Book Now</a>
-</div>
-</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EVEPRO GLOW | Elite Mobile Aesthetics & Hair Restoration</title>
+<meta name="description" content="Nurse-led mobile HydroFacials, LED therapy, and hair restoration in Great Neck & Long Island. Clean. Conscious. Certified.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 <style>
 :root {
   --gold: #D4AF37;
@@ -17,129 +18,180 @@
   --sage: #2F5D3A;
   --white: #ffffff;
   --red: #ff0000;
+  --cream: #FBF9F4;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { background-color: var(--black); color: var(--white); font-family: 'Montserrat', sans-serif; line-height: 1.6; }
+body { background-color: var(--black); color: var(--white); font-family: 'Montserrat', sans-serif; line-height: 1.6; overflow-x: hidden; }
 
-/* SCARCITY & URGENCY */
-.top-bar { background: var(--red); color: white; text-align: center; padding: 12px; font-weight: 900; text-transform: uppercase; font-size: 14px; position: sticky; top: 0; z-index: 2000; }
+/* 1. URGENCY BAR */
+.urgency-bar {
+  background: var(--red);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 13px;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  letter-spacing: 1px;
+}
 
-nav { position: fixed; top: 40px; width: 100%; background: rgba(5, 5, 5, 0.95); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; border-bottom: 1px solid rgba(212,175,55,0.2); }
+/* NAVIGATION */
+nav {
+  position: fixed; top: 40px; width: 100%;
+  background: rgba(5, 5, 5, 0.95);
+  padding: 15px 5%;
+  display: flex; justify-content: space-between; align-items: center;
+  z-index: 1000; border-bottom: 1px solid rgba(212,175,55,0.2);
+  backdrop-filter: blur(10px);
+}
 .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 900; color: var(--white); }
 .logo span { color: var(--gold); }
+.tagline-nav { font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); font-weight: 700; }
 
-/* HERO SPLIT */
-.hero-split { display: flex; height: 85vh; width: 100%; position: relative; margin-top: 80px; border-bottom: 4px solid var(--gold); }
-.split-side { width: 50%; height: 100%; background-size: cover; background-position: center; position: relative; }
-.left-old { background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=2070'); }
+/* HERO SPLIT SECTION */
+.hero-split { display: flex; height: 90vh; width: 100%; position: relative; margin-top: 80px; border-bottom: 4px solid var(--gold); }
+.split-side { width: 50%; height: 100%; background-size: cover; background-position: center; }
+.left-old { background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=2070'); filter: grayscale(50%); }
 .right-young { background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2070'); }
 
 .hero-text { position: absolute; z-index: 10; text-align: center; width: 100%; top: 35%; pointer-events: none; }
-.hero-text h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 8vw, 5rem); font-weight: 900; line-height: 0.8; }
-.hero-text .gold-text { color: var(--gold); display: block; }
+.hero-text h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 7vw, 5rem); font-weight: 900; line-height: 0.8; }
+.hero-text .gold-accent { color: var(--gold); display: block; }
+.hero-text .slash { font-size: 0.3em; letter-spacing: 15px; display: block; margin: 15px 0; color: white; }
 
-/* SERVICE SECTIONS */
-.section-head { text-align: center; padding: 80px 5% 40px; }
-.section-head h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--gold); text-transform: uppercase; }
+/* SECTION STYLING */
+.section { padding: 80px 8%; }
+.section-title { font-family: 'Playfair Display', serif; font-size: 2.8rem; color: var(--gold); text-align: center; margin-bottom: 40px; text-transform: uppercase; }
 
-.menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; padding: 0 5% 80px; }
-.card { background: #111; border: 1px solid #222; padding: 40px; position: relative; transition: 0.3s; }
+/* HAIR RESTORATION SUITE */
+.hair-suite { background: #0a0a0a; display: flex; flex-wrap: wrap; gap: 50px; align-items: center; border-top: 1px solid var(--sage); }
+.hair-content { flex: 1; min-width: 320px; }
+.hair-content h2 { font-size: 2.5rem; color: var(--gold); margin-bottom: 20px; font-family: 'Playfair Display'; }
+.hair-content p { color: #ccc; margin-bottom: 20px; font-size: 1.1rem; }
+.hair-checklist { list-style: none; margin-bottom: 30px; }
+.hair-checklist li { margin-bottom: 15px; padding-left: 35px; position: relative; font-weight: 500; }
+.hair-checklist li::before { content: "\f471"; font-family: "Font Awesome 6 Free"; font-weight: 900; position: absolute; left: 0; color: var(--gold); }
+
+/* SERVICE CARDS */
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.card { background: #111; border: 1px solid #222; padding: 45px 30px; position: relative; text-align: center; transition: 0.3s; }
 .card:hover { border-color: var(--gold); transform: translateY(-5px); }
-.price { color: var(--gold); font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; display: block; margin-bottom: 15px; }
-.tag { background: var(--gold); color: black; font-size: 0.7rem; font-weight: 900; padding: 3px 10px; position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); text-transform: uppercase; }
+.price-circle { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 900; color: var(--gold); display: block; margin-bottom: 15px; }
+.card h3 { margin-bottom: 15px; font-size: 1.3rem; letter-spacing: 1px; }
+.card p { font-size: 0.9rem; color: #888; }
+.featured-card { border: 2px solid var(--gold); background: #0c0c0c; }
+.badge { position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); background: var(--gold); color: black; padding: 4px 15px; font-size: 11px; font-weight: 900; text-transform: uppercase; }
 
-/* THE HAIR LOSS SECTION */
-.hair-loss-section { background: #0a0a0a; border-top: 1px solid var(--sage); padding: 80px 5%; }
-.hair-flex { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; max-width: 1200px; margin: 0 auto; }
-.hair-text { flex: 1; min-width: 300px; }
-.hair-text h2 { color: var(--gold); font-size: 2.5rem; margin-bottom: 20px; font-family: 'Playfair Display'; }
-.hair-text p { margin-bottom: 20px; color: #ccc; }
-.hair-list { list-style: none; }
-.hair-list li { margin-bottom: 12px; padding-left: 30px; position: relative; }
-.hair-list li::before { content: "🧬"; position: absolute; left: 0; }
+/* ECO PROMISE SECTION */
+.eco-promise { background: var(--cream); color: var(--sage); text-align: center; }
+.eco-promise h2 { color: var(--sage); }
+.eco-grid { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 30px; }
+.eco-badge { border: 1.5px solid var(--sage); padding: 12px 20px; font-weight: 800; font-size: 12px; border-radius: 4px; }
 
-/* PULSE BUTTON */
-.btn-main { display: inline-block; background: var(--red); color: white; padding: 18px 45px; font-weight: 900; text-decoration: none; border-radius: 5px; animation: pulse 1.5s infinite; margin-top: 30px; text-transform: uppercase; }
+/* CALL TO ACTION */
+.cta-btn { display: inline-block; background: var(--red); color: white; padding: 20px 50px; font-weight: 900; text-decoration: none; text-transform: uppercase; letter-spacing: 2px; border-radius: 4px; animation: pulse 1.5s infinite; }
 @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255,0,0,0.7); } 70% { box-shadow: 0 0 0 15px rgba(255,0,0,0); } 100% { box-shadow: 0 0 0 0 rgba(255,0,0,0); } }
 
+footer { background: #000; padding: 60px 5%; text-align: center; font-size: 0.8rem; color: #555; border-top: 1px solid #222; }
+
 @media (max-width: 768px) {
-  .hero-split { flex-direction: column; }
+  .hero-split { flex-direction: column; height: 80vh; }
   .split-side { width: 100%; height: 50%; }
+  .hero-text { top: 30%; }
 }
 </style>
 </head>
 <body>
 
-<div class="top-bar">🚨 Only 5 Spots Left This Week — Mobile Great Neck & Long Island</div>
+<div class="urgency-bar">🚨 LIMITED: Only 5 Mobile Appointments Left This Week!</div>
 
 <nav>
   <div class="logo">EVEPRO <span>GLOW</span></div>
-  <div style="font-weight: bold; color: var(--gold); font-size: 0.9rem;">NURSE-LED AESTHETICS</div>
+  <div class="tagline-nav">Nurse-Led • Mobile • Long Island</div>
 </nav>
 
 <header class="hero-split">
   <div class="split-side left-old"></div>
   <div class="split-side right-young"></div>
   <div class="hero-text">
-    <h1>KEEP LOOKING OLDER<br><span style="font-size: 0.3em; letter-spacing: 15px; color: white;">OR</span><br><span class="gold-text">START LOOKING YOUNGER</span></h1>
-    <a href="sms:15167243208" class="btn-main">Text To Book: 516.724.3208</a>
+    <h1>KEEP LOOKING OLDER<span class="slash">OR</span><span class="gold-accent">START LOOKING YOUNGER</span></h1>
+    <a href="sms:15167243208" class="cta-btn" style="margin-top: 40px;">Text to Book: 516.724.3208</a>
   </div>
 </header>
 
-<section class="hair-loss-section">
-  <div class="hair-flex">
-    <div class="hair-text">
-      <h2>Hair Restoration Protocol</h2>
-      <p>Don't wait until it's gone. Our <strong>Nurse-Led Hair Loss Protocol</strong> combines clinical genetics with powerful follicle stimulants to stop recession and trigger regrowth.</p>
-      <ul class="hair-list">
-        <li><strong>Genetic Mapping:</strong> We analyze your Father/Mother's hair history to predict your trajectory.</li>
-        <li><strong>Dermal Stimulants:</strong> Expert integration of Minoxidil and Saw Palmetto optimization.</li>
-        <li><strong>Medical LED Follicle Therapy:</strong> Red-light spectra to wake up dormant roots.</li>
-      </ul>
-      <a href="sms:15167243208" class="btn-main" style="background:var(--gold); color:black;">Free Hair Consultation</a>
-    </div>
-    <div style="flex: 1; min-width: 300px; border: 4px solid var(--gold); overflow: hidden;">
-      <img src="https://images.unsplash.com/photo-1626015335022-d049f5383569?q=80&w=2000" alt="Hair Therapy" style="width: 100%; display: block; filter: grayscale(1);">
-    </div>
+<section class="section hair-suite">
+  <div class="hair-content">
+    <h2>Hair Restoration Protocol</h2>
+    <p>We don't just treat the skin; we restore the crown. Our **Nurse-Led Hair Restoration** combines genetic profiling with medical-grade follicular stimulation to stop recession in its tracks.</p>
+    <ul class="hair-checklist">
+      <li><strong>Genetic Mapping:</strong> We analyze your biological hair trajectory (Mother/Father’s history) to build your plan.</li>
+      <li><strong>Advanced Stimulants:</strong> Medical optimization of Minoxidil and Saw Palmetto (DHT Blockers).</li>
+      <li><strong>LED Follicle Therapy:</strong> Red-light Bio-Light therapy to reactivate dormant roots.</li>
+    </ul>
+    <a href="sms:15167243208" class="cta-btn" style="background:var(--gold); color:black; animation:none;">Consult A Nurse</a>
+  </div>
+  <div style="flex: 1; min-width: 320px; border: 5px solid var(--gold);">
+    <img src="https://images.unsplash.com/photo-1626015335022-d049f5383569?q=80&w=2000" alt="Hair Loss Consultation" style="width: 100%; filter: grayscale(100%); display: block;">
   </div>
 </section>
 
-<div class="section-head">
-  <h2>The Treatment Menu</h2>
-</div>
+<section class="section">
+  <h2 class="section-title">The Treatment Menu</h2>
+  <div class="menu-grid">
+    
+    <div class="card featured-card">
+      <div class="badge">Recommended</div>
+      <span class="price-circle">$229</span>
+      <h3>Signature Fusion</h3>
+      <p>The "Glass Skin" protocol. Includes OtoDerm Oxygen Dome, H2-O2 Hydrogen Deep Cleanse, and AI Skin Scan.</p>
+    </div>
 
-<div class="menu-grid">
-  <div class="card">
-    <div class="tag">The "Glass Skin" Standard</div>
-    <span class="price">$229</span>
-    <h3>OtoDerm Signature Fusion</h3>
-    <p>Complete Korean protocol with the Oxygen Dome and AI Skin Scan.</p>
+    <div class="card">
+      <span class="price-circle">$150</span>
+      <h3>Premium Rejuvenation</h3>
+      <p>Full HydroFacial + Bio-Light LED therapy + Custom Vegan Rejuvenating Mask.</p>
+    </div>
+
+    <div class="card">
+      <span class="price-circle">$95</span>
+      <h3>Men’s Refining</h3>
+      <p>Engineered for thicker skin and shaving irritation. Deep pore clarification and hydration.</p>
+    </div>
+
+    <div class="card">
+      <span class="price-circle">$75</span>
+      <h3>Express Vegan Facial</h3>
+      <p>Quick hydration and detox. 100% clean, non-invasive, and nurse-led.</p>
+    </div>
+
   </div>
+</section>
 
-  <div class="card">
-    <span class="price">$150</span>
-    <h3>Bio-Light Rejuvenation</h3>
-    <p>Medical-grade LED therapy for anti-aging, acne, or hair follicle stimulation.</p>
+<section style="background: var(--gold); color: black; padding: 60px 5%; text-align: center;">
+  <h2 style="font-family: 'Playfair Display'; font-size: 2.5rem; margin-bottom: 20px;">DIAGNOSE BEFORE YOU TREAT</h2>
+  <p style="font-weight: 700; font-size: 1.2rem; margin-bottom: 30px;">Get a Medical-Grade AI Skin & Scalp Scan for $99.<br>Your $99 is 100% reimbursed as a credit toward your first treatment!</p>
+  <a href="sms:15167243208" class="cta-btn" style="background: black; color: var(--gold); animation: none;">Reserve Your Scan</a>
+</section>
+
+<section class="section eco-promise">
+  <h2>Clean. Conscious. Certified.</h2>
+  <p>Our commitment to verifiable sustainability standards.</p>
+  <div class="eco-grid">
+    <div class="eco-badge">FSC® RECYCLED PAPER</div>
+    <div class="eco-badge">BPI® COMPOSTABLE</div>
+    <div class="eco-badge">GRS RECYCLED CONTENT</div>
+    <div class="eco-badge">ECOCERT VERIFIED</div>
   </div>
+</section>
 
-  <div class="card">
-    <div class="tag">Men's Exclusive</div>
-    <span class="price">$95</span>
-    <h3>Men's Refining Facial</h3>
-    <p>Designed for thicker skin and shaving irritation; clarifies and refreshes.</p>
-  </div>
-
-  <div class="card" style="border: 1px dashed var(--gold);">
-    <span class="price">$99*</span>
-    <h3>AI Skin & Scalp Scan</h3>
-    <p>Mathematical proof of your skin's health. $99 is reimbursed as credit for your first treatment.</p>
-  </div>
-</div>
-
-<footer style="text-align: center; padding: 60px; border-top: 1px solid #222; background: #000; color: #666; font-size: 0.8rem;">
-  <p>EvePro Services | Clean. Conscious. Certified.</p>
-  <p style="margin-top: 10px;">Great Neck • Long Island • Mobile Aesthetic Lab</p>
+<footer>
+  <p style="color: var(--gold); font-weight: bold; margin-bottom: 10px;">EVEPRO SERVICES LLC | Great Neck & Long Island</p>
+  <p>All packaging and materials meet global eco-standards.</p>
+  <p>Licensed & Insured. Nurse-Led Mobile Aesthetic Lab.</p>
 </footer>
 
 </body>
