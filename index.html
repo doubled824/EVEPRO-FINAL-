@@ -1,218 +1,176 @@
+<div style="background: #214C2F; color: #FBF9F4; text-align: center; padding: 10px; font-size: 14px; font-weight: 700;">
+  ✨ Only 5 spots left for mobile facials this week! 
+  <a href="booking.html" style="color: #A9CBA4; text-decoration: underline; margin-left: 10px;">Book Now</a>
+</div>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EVEPRO GLOW | Elite Mobile Aesthetics</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+<title>EvePro Services | Mobile Nurse-Led Aesthetics</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
 :root {
   --gold: #D4AF37;
+  --sage: #2F5D3A;
+  --cream: #FBF9F4;
   --black: #050505;
-  --white: #ffffff;
   --red: #ff0000;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--black); color: white; font-family: 'Montserrat', sans-serif; overflow-x: hidden; }
 
-body {
-  background-color: var(--black);
-  color: var(--white);
-  font-family: 'Montserrat', sans-serif;
-  overflow-x: hidden;
+/* 1. ATTENTION GRABBER: SCARCITY BAR */
+.top-bar {
+  background: var(--red);
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  position: sticky;
+  top: 0;
+  z-index: 1001;
 }
 
-/* --- NAVIGATION --- */
+/* NAVIGATION */
 nav {
-  position: fixed; top: 0; width: 100%;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0,0,0,0.9);
   padding: 15px 5%;
-  display: flex; justify-content: space-between; align-items: center;
-  z-index: 1000;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--sage);
 }
-.logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 900; color: var(--white); }
+.logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 900; color: white; }
 .logo span { color: var(--gold); }
 
-/* --- THE SPLIT HERO MIX --- */
-.hero-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding-top: 60px; /* Offset for nav */
-}
-
+/* 2. ATTENTION GRABBER: THE SPLIT HERO */
+.hero-wrapper { display: flex; justify-content: center; align-items: center; height: 85vh; padding: 20px; }
 .split {
   position: relative;
-  width: 95vw;
-  height: 85vh;
+  width: 100%;
+  height: 100%;
   border: 6px solid var(--gold);
   overflow: hidden;
-  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  background: #111;
 }
-
-.before, .after {
-  position: absolute;
-  width: 50%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-}
-
-/* High-contrast images for the split effect */
-.before {
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=2070'); /* Textured/Dry skin vibe */
-  left: 0;
-  filter: grayscale(40%) contrast(1.1);
-}
-
-.after {
-  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2070'); /* Glowing vibe */
-  right: 0;
-}
+.before, .after { position: absolute; width: 50%; height: 100%; background-size: cover; background-position: center; }
+.before { left: 0; background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=2070'); }
+.after { right: 0; background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2070'); }
 
 .slash {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-  width: 120%; /* Longer to ensure it covers the corners */
-  height: 4px;
-  background: var(--gold);
-  z-index: 2;
-  box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(45deg);
+  width: 150%; height: 4px; background: var(--gold); z-index: 2; box-shadow: 0 0 20px rgba(212,175,55,0.8);
 }
 
 .text {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: clamp(2rem, 5vw, 5.5vw);
-  font-weight: 900;
-  color: var(--gold);
-  text-transform: uppercase;
-  letter-spacing: -2px;
-  line-height: 0.85;
-  text-align: center;
-  z-index: 3;
-  text-shadow: 4px 4px 10px rgba(0,0,0,0.9);
-  width: 100%;
+  position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);
+  font-size: clamp(1.8rem, 6vw, 5vw); font-weight: 900; color: var(--gold);
+  text-transform: uppercase; letter-spacing: -2px; line-height: 0.8; text-align: center; z-index: 3; width: 90%;
+}
+.text span { display: block; color: white; }
+
+/* 3. ATTENTION GRABBER: NURSE-LED BADGE */
+.nurse-badge {
+  position: absolute; top: 20px; right: 20px; background: var(--sage); color: white;
+  padding: 8px 15px; border-radius: 50px; font-weight: 700; font-size: 12px; z-index: 4;
+  border: 1px solid var(--gold);
 }
 
-.text span {
-  display: block;
-  color: var(--white);
+/* PULSING CTA */
+.btn-pulse {
+  position: absolute; bottom: 15%; left: 50%; transform: translateX(-50%);
+  background: var(--red); color: white; padding: 20px 50px; font-weight: 900;
+  font-size: 22px; text-decoration: none; border-radius: 5px; animation: pulse 1.5s infinite; z-index: 5;
 }
-
-/* --- THE PULSING CTA --- */
-.pulse-btn {
-  position: absolute;
-  bottom: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--red);
-  color: white;
-  font-weight: 900;
-  font-size: clamp(18px, 2vw, 28px);
-  padding: 18px 60px;
-  border: none;
-  cursor: pointer;
-  z-index: 4;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  animation: pulse 1.5s infinite;
-  text-decoration: none;
-}
-
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(255,0,0,0.7); transform: translateX(-50%) scale(1); }
-  50% { box-shadow: 0 0 0 20px rgba(255,0,0,0); transform: translateX(-50%) scale(1.05); }
-  100% { box-shadow: 0 0 0 0 rgba(255,0,0,0); transform: translateX(-50%) scale(1); }
+  0% { box-shadow: 0 0 0 0 rgba(255,0,0,0.7); }
+  70% { box-shadow: 0 0 0 20px rgba(255,0,0,0); }
+  100% { box-shadow: 0 0 0 0 rgba(255,0,0,0); }
 }
 
-.number {
-  position: absolute;
-  bottom: 8%;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: clamp(16px, 1.5vw, 22px);
-  color: white;
-  letter-spacing: 4px;
-  font-weight: 700;
-  z-index: 4;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-}
+/* SERVICES SECTION */
+.services { padding: 60px 5%; background: var(--black); display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.card { background: #111; padding: 30px; border: 1px solid #222; text-align: center; }
+.card h3 { color: var(--gold); margin-bottom: 10px; font-size: 18px; }
+.card .price { font-size: 32px; font-weight: 900; display: block; margin: 10px 0; }
 
-/* --- MENU SECTION --- */
-.menu-section { padding: 80px 5%; background: var(--black); text-align: center; }
-.menu-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-.card { border: 1px solid #333; padding: 40px; background: #0a0a0a; transition: 0.3s; }
-.card:hover { border-color: var(--gold); }
-.card h3 { color: var(--gold); font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 10px; }
-.price { font-size: 2.5rem; display: block; margin-bottom: 20px; font-weight: bold; }
+/* ECO BADGES */
+.eco-strip { background: var(--cream); color: var(--sage); padding: 40px 5%; text-align: center; }
+.badge-grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
+.badge { border: 1px solid var(--sage); padding: 10px 20px; font-weight: 700; font-size: 12px; text-transform: uppercase; }
 
 @media (max-width: 768px) {
-  .slash { transform: translate(-50%, -50%) rotate(90deg); width: 100%; } /* Vertical on mobile */
-  .text { font-size: 3rem; }
-  .split { height: 70vh; }
+  .text { font-size: 2.5rem; }
+  .slash { transform: translate(-50%, -50%) rotate(90deg); }
 }
 </style>
 </head>
 <body>
 
+<div class="top-bar">🚨 Warning: Only 5 Mobile Appointments Left This Week!</div>
+
 <nav>
-  <div class="logo">EVEPRO <span>GLOW</span></div>
-  <div style="color:var(--gold); font-weight:bold; font-size: 0.8rem; text-transform:uppercase; letter-spacing:1px;">Great Neck • Long Island</div>
+  <div class="logo">EVEPRO <span>SERVICES</span></div>
+  <div style="font-size: 12px; font-weight: 700; color: var(--gold);">GREAT NECK • LONG ISLAND</div>
 </nav>
 
 <section class="hero-wrapper">
   <div class="split">
+    <div class="nurse-badge">👩‍⚕️ NURSE-LED & CERTIFIED</div>
     <div class="before"></div>
     <div class="after"></div>
     <div class="slash"></div>
     
     <div class="text">
       START LOOKING <span>YOUNGER</span>
-      <div style="font-size: 0.4em; letter-spacing: 10px; margin: 10px 0;">OR</div>
+      <div style="font-size: 0.3em; letter-spacing: 8px; margin: 15px 0; color: var(--gold);">— OR —</div>
       KEEP LOOKING <span>OLDER</span>
     </div>
 
-    <a href="sms:15167243208" class="pulse-btn">TEXT TO BOOK</a>
-    
-    <div class="number">516.724.3208</div>
+    <a href="sms:15167243208" class="btn-pulse">TEXT TO BOOK NOW</a>
   </div>
 </section>
 
-<section class="menu-section">
-  <h2 style="font-family:'Playfair Display'; font-size: 2.5rem; color:var(--gold);">Choose Your Transformation</h2>
-  <div class="menu-container">
-    <div class="card">
-      <h3>The Reset</h3>
-      <span class="price">$189</span>
-      <p>Hydrogen Deep Cleanse + Oxygen Infusion. Perfect for first-timers.</p>
-    </div>
-    <div class="card" style="border: 2px solid var(--gold);">
-      <h3>Signature Fusion</h3>
-      <span class="price">$229</span>
-      <p>The "Glass Skin" Protocol. Includes AI Skin Scan & Oxygen Dome.</p>
-    </div>
-    <div class="card">
-      <h3>The Sculpt</h3>
-      <span class="price">$219</span>
-      <p>Bipolar RF Lift + Peptide Infusion for immediate tightening.</p>
-    </div>
+<section style="background: var(--gold); color: black; padding: 20px; text-align: center; font-weight: 900;">
+  [span_3](start_span)🔥 ATTENTION: Get a Medical-Grade AI Skin Scan for $99 — Fully reimbursed as credit toward your first treatment[span_3](end_span)!
+</section>
+
+<section class="services">
+  <div class="card">
+    <h3>Express Vegan HydroFacial</h3>
+    <span class="price">$75</span>
+    [span_4](start_span)<p>Quick hydration + pore cleanse for all skin types[span_4](end_span).</p>
+  </div>
+  <div class="card" style="border-color: var(--gold);">
+    <h3>Deep Pore + Glow</h3>
+    <span class="price">$100</span>
+    [span_5](start_span)<p>Targets oil buildup and dullness with tailored serums[span_5](end_span).</p>
+  </div>
+  <div class="card">
+    <h3>Premium Rejuvenation</h3>
+    <span class="price">$150</span>
+    [span_6](start_span)<p>HydroFacial + LED + Rejuvenating Mask[span_6](end_span).</p>
   </div>
 </section>
 
-<footer style="text-align:center; padding: 40px; font-size: 0.8rem; opacity: 0.5; letter-spacing: 2px;">
-  &copy; 2026 EVEPRO SERVICES LLC. LICENSED & INSURED.
+<section class="eco-strip">
+  <h2 style="font-family: 'Playfair Display';">Clean. Conscious. Certified.</h2>
+  [span_7](start_span)[span_8](start_span)<p>Our commitment to verifiable sustainability[span_7](end_span)[span_8](end_span).</p>
+  <div class="badge-grid">
+    <div class="badge">FSC Certified</div>
+    <div class="badge">BPI Compostable</div>
+    <div class="badge">GRS Recycled</div>
+    <div class="badge">Ecocert Verified</div>
+  </div>
+</section>
+
+<footer style="text-align: center; padding: 40px; font-size: 10px; opacity: 0.6; letter-spacing: 2px;">
+  &copy; 2026 EVEPRO SERVICES LLC. LICENSED & INSURED. [span_9](start_span)[span_10](start_span)ALL PACKAGING MEETS GLOBAL ECO-STANDARDS[span_9](end_span)[span_10](end_span).
 </footer>
 
 </body>
