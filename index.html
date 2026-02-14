@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EVEPRO GLOW | Elite Concierge Aesthetics</title>
-<meta name="description" content="Nurse-led concierge HydroFacials, LED therapy, and hair restoration in Great Neck & Long Island. Clean. Conscious. Certified.">
+<meta name="description" content="Nurse-led concierge HydroFacials, LED therapy, and hair restoration in Great Neck & Long Island.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
 :root {
   --gold: #D4AF37;
   --black: #080808;
-  --dark-grey: #1a1a1a;
+  --dark-grey: #121212;
   --white: #ffffff;
   --sage: #4A6C58;
 }
@@ -23,130 +23,77 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { background-color: var(--black); color: var(--white); font-family: 'Montserrat', sans-serif; line-height: 1.6; overflow-x: hidden; }
 
-/* SCARCITY BAR (The Momentum Sales Tactic) */
+/* URGENCY BAR */
 .urgency-bar {
-  background: var(--gold);
-  color: var(--black);
-  text-align: center;
-  padding: 10px;
-  font-weight: 800;
-  text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: 1px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 2000;
+  background: var(--gold); color: var(--black); text-align: center; padding: 10px;
+  font-weight: 800; text-transform: uppercase; font-size: 12px; letter-spacing: 1px;
+  position: fixed; width: 100%; top: 0; z-index: 2000;
 }
 
-/* NAVIGATION */
+/* NAV */
 nav {
-  position: fixed; top: 35px;
-  width: 100%;
-  background: rgba(8, 8, 8, 0.95);
-  padding: 20px 5%;
-  display: flex; justify-content: space-between; align-items: center;
-  z-index: 1000; border-bottom: 1px solid rgba(212,175,55,0.3);
-  backdrop-filter: blur(10px);
+  position: fixed; top: 35px; width: 100%; background: rgba(8, 8, 8, 0.95);
+  padding: 20px 5%; display: flex; justify-content: space-between; align-items: center;
+  z-index: 1000; border-bottom: 1px solid rgba(212,175,55,0.3); backdrop-filter: blur(10px);
 }
 .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 900; letter-spacing: 1px; }
 .logo span { color: var(--gold); }
-.location-tag { font-size: 0.7rem; color: #888; text-transform: uppercase; margin-left: 10px; border-left: 1px solid #444; padding-left: 10px; display: inline-block; }
 
-/* HERO SECTION */
+/* HERO */
 .hero {
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center;
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=2070');
-  background-size: cover;
-  background-position: center;
-  padding: 0 20px;
-  margin-top: 35px;
+  background-size: cover; background-position: center; margin-top: 35px;
 }
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  line-height: 1.1;
-  margin-bottom: 20px;
-}
-.hero h1 span { color: var(--gold); display: block; }
-.hero p {
-  font-size: 1.1rem;
-  max-width: 600px;
-  margin: 0 auto 40px;
-  color: #ccc;
-}
-
-/* CTA BUTTONS */
-.btn {
-  display: inline-block;
-  padding: 18px 40px;
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 2px;
-  text-decoration: none;
-  transition: 0.3s;
-  border: 1px solid var(--gold);
-}
-.btn-primary { background: var(--gold); color: var(--black); }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; margin-bottom: 20px; }
+.hero h1 span { color: var(--gold); }
+.btn-primary { background: var(--gold); color: var(--black); padding: 18px 40px; text-transform: uppercase; font-weight: 800; letter-spacing: 2px; text-decoration: none; border: 1px solid var(--gold); display: inline-block; transition:0.3s;}
 .btn-primary:hover { background: white; border-color: white; transform: translateY(-3px); }
-.btn-outline { background: transparent; color: var(--gold); margin-left: 15px; }
-.btn-outline:hover { background: rgba(212, 175, 55, 0.1); }
 
-/* TRUST BADGES */
-.trust-strip { background: var(--dark-grey); padding: 20px 0; text-align: center; border-bottom: 1px solid #333; }
-.trust-item { display: inline-block; margin: 0 15px; font-size: 0.8rem; color: #888; text-transform: uppercase; }
-.trust-item i { color: var(--gold); margin-right: 5px; }
-
-/* SERVICES GRID */
+/* SECTION STYLES */
 .section { padding: 80px 5%; }
 .section-title { text-align: center; margin-bottom: 50px; }
 .section-title h2 { font-family: 'Playfair Display'; font-size: 3rem; color: var(--white); }
-.section-title p { color: var(--gold); text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; margin-bottom: 10px; }
+.section-title p { color: var(--gold); text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; }
 
+/* GRID STYLES */
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-
 .card {
-  background: var(--dark-grey);
-  border: 1px solid #333;
-  padding: 40px 30px;
-  transition: 0.3s;
-  position: relative;
-  overflow: hidden;
+  background: var(--dark-grey); border: 1px solid #333; padding: 40px 30px;
+  transition: 0.3s; position: relative; overflow: hidden; display: flex; flex-direction: column;
 }
 .card:hover { border-color: var(--gold); transform: translateY(-5px); }
-.card h3 { font-family: 'Playfair Display'; font-size: 1.8rem; margin-bottom: 15px; }
-.card .price { font-size: 1.5rem; color: var(--gold); font-weight: 800; display: block; margin-bottom: 20px; }
-.card ul { list-style: none; margin-bottom: 30px; color: #bbb; }
-.card ul li { margin-bottom: 10px; font-size: 0.9rem; }
-.card ul li::before { content: "•"; color: var(--gold); margin-right: 10px; }
+.card h3 { font-family: 'Playfair Display'; font-size: 1.6rem; margin-bottom: 10px; }
+.card .price { font-size: 1.4rem; color: var(--gold); font-weight: 800; display: block; margin-bottom: 15px; }
+.card p { font-size: 0.9rem; color: #ccc; margin-bottom: 20px; flex-grow: 1;}
+.book-link { color: var(--white); text-decoration: none; font-weight: 700; border-bottom: 1px solid var(--gold); align-self: flex-start; text-transform: uppercase; font-size: 0.8rem;}
 
-/* HAIR RESTORATION (The "Science" Section) */
-.hair-section { background: #050505; border-top: 1px solid #333; border-bottom: 1px solid #333; }
-.hair-flex { display: flex; flex-wrap: wrap; align-items: center; gap: 50px; }
-.hair-text { flex: 1; min-width: 300px; }
-.hair-img { flex: 1; min-width: 300px; height: 400px; background: url('https://images.unsplash.com/photo-1585686001224-4f519543e494?q=80&w=2070') center/cover; border: 2px solid var(--gold); }
-
-/* LOCATION & HOURS (Fixing Kristin's Complaint) */
-.location-box {
-  background: var(--white);
-  color: var(--black);
-  padding: 60px;
-  text-align: center;
-  margin: 60px 5%;
-  border: 10px solid var(--dark-grey);
+/* ADD-ONS SECTION (The 6-in-1 Breakdown) */
+.addon-section { background: #151515; padding: 60px 5%; border-top: 1px solid #333; border-bottom: 1px solid #333; }
+.addon-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+.addon-card {
+  background: black; border: 1px dashed #444; padding: 25px; text-align: center; transition: 0.3s;
 }
+.addon-card:hover { border-color: var(--gold); background: #0e0e0e; }
+.addon-card h4 { font-family: 'Playfair Display'; font-size: 1.1rem; color: white; margin-bottom: 5px; }
+.addon-card .add-price { color: var(--gold); font-weight: 900; font-size: 1.2rem; }
+.addon-card span { display: block; font-size: 0.75rem; color: #888; margin-top: 5px; text-transform: uppercase; }
+
+/* MASK BAR */
+.mask-bar { padding: 60px 5%; text-align: center; background: var(--black); }
+.mask-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 30px; }
+.mask-item {
+  background: var(--dark-grey); padding: 15px 30px; border: 1px solid #333; border-radius: 50px;
+  color: white; font-weight: 600; display: flex; align-items: center; gap: 10px; transition: 0.3s;
+}
+.mask-item:hover { border-color: var(--gold); color: var(--gold); }
+.mask-item .tag { background: var(--gold); color: black; padding: 2px 8px; font-size: 0.7rem; font-weight: 900; border-radius: 4px; }
 
 /* FOOTER */
 footer { background: black; padding: 50px 5%; text-align: center; font-size: 0.8rem; color: #555; border-top: 1px solid #222; }
 
 @media (max-width: 768px) {
   .hero h1 { font-size: 2.5rem; }
-  .btn { display: block; margin: 10px 0; width: 100%; text-align: center; }
-  .hair-flex { flex-direction: column-reverse; }
 }
 </style>
 </head>
@@ -155,112 +102,181 @@ footer { background: black; padding: 50px 5%; text-align: center; font-size: 0.8
 <div class="urgency-bar">Only 4 "Concierge" Appointments Remaining This Week</div>
 
 <nav>
-  <div class="logo">EVEPRO <span>GLOW</span>
-    <span class="location-tag">Great Neck • Queens • LI</span>
-  </div>
-  <a href="sms:+15169624108" style="color: var(--white); text-decoration: none; font-size: 1.2rem;"><i class="fas fa-comment-dots"></i></a>
+  <div class="logo">EVEPRO <span>GLOW</span></div>
+  <a href="sms:+15169624108" style="color: var(--white); font-size: 1.5rem;"><i class="fas fa-comment-dots"></i></a>
 </nav>
 
 <section class="hero">
   <div>
     <h1>CLINICAL RESULTS.<br><span>WITHOUT THE CLINIC.</span></h1>
-    <p>Nurse-Administered HydroFacials & Hair Restoration in the privacy of your home.</p>
-    <a href="sms:+15169624108?body=I'm%20interested%20in%20booking%20a%20concierge%20treatment" class="btn btn-primary">Text to Book</a>
-    <a href="#menu" class="btn btn-outline">View Menu</a>
+    <p style="margin-bottom: 30px; color: #ccc;">Nurse-Administered Concierge Aesthetics.</p>
+    <a href="sms:+15169624108" class="btn-primary">Text to Book</a>
   </div>
 </section>
 
-<div class="trust-strip">
-  <div class="trust-item"><i class="fas fa-user-nurse"></i> Board Certified RNs</div>
-  <div class="trust-item"><i class="fas fa-leaf"></i> 100% Vegan Formulas</div>
-  <div class="trust-item"><i class="fas fa-star"></i> 5-Star Rated</div>
-</div>
-
-<section class="section" id="menu">
+<section class="section">
   <div class="section-title">
-    <p>The Collection</p>
-    <h2>Concierge Treatments</h2>
+    <p>Nurse-Led Protocols</p>
+    <h2>The Treatment Menu</h2>
   </div>
   
   <div class="grid">
     <div class="card">
-      <span style="position: absolute; top:0; right:0; background:var(--gold); color:black; padding:5px 15px; font-weight:bold; font-size:0.8rem;">MOST POPULAR</span>
-      <h3>Signature Fusion</h3>
+      <span style="position: absolute; top:0; right:0; background:var(--gold); color:black; padding:5px 15px; font-weight:bold; font-size:0.7rem;">SIGNATURE</span>
+      <h3>Glass Skin Fusion</h3>
       <span class="price">$229</span>
-      <ul>
-        <li>O2toDerm Oxygen Dome Therapy</li>
-        <li>H2-O2 Hydrogen Deep Cleanse</li>
-        <li>Medical-Grade AI Skin Scan</li>
-      </ul>
-      <a href="sms:+15169624108?body=Book%20Signature%20Fusion" style="color: var(--gold); text-decoration: none; font-weight: 800; border-bottom: 1px solid var(--gold);">RESERVE NOW</a>
+      <p>The 90-min "Everything" protocol. Includes H2-O2 Deep Cleanse, Oxygen Dome, and RF Tightening.</p>
+      <a href="sms:+15169624108?body=Book%20Glass%20Skin" class="book-link">Reserve</a>
+    </div>
+
+    <div class="card">
+      <h3>Acne Defense Protocol</h3>
+      <span class="price">$185</span>
+      <p>Targeted High-Frequency bacteria kill, ultrasonic extraction, and Blue-Light Therapy.</p>
+      <a href="sms:+15169624108?body=Book%20Acne%20Defense" class="book-link">Reserve</a>
+    </div>
+
+    <div class="card">
+      <h3>Genetic Hair Restoration</h3>
+      <span class="price">$250</span>
+      <p>Scalp stimulation using RF Technology and Bio-Light to reactivate dormant follicles.</p>
+      <a href="sms:+15169624108?body=Book%20Hair%20Restoration" class="book-link">Reserve</a>
     </div>
 
     <div class="card">
       <h3>Gentlemen's Refining</h3>
       <span class="price">$95</span>
-      <ul>
-        <li>Deep Pore Clarification</li>
-        <li>Engineered for thicker skin</li>
-        <li>Anti-irritation beard protocol</li>
-      </ul>
-      <a href="sms:+15169624108?body=Book%20Mens%20Refining" style="color: #888; text-decoration: none; font-weight: 800; border-bottom: 1px solid #555;">RESERVE NOW</a>
+      <p>Engineered for thicker skin. Includes deep pore steam and anti-irritation beard care.</p>
+      <a href="sms:+15169624108?body=Book%20Mens%20Refining" class="book-link">Reserve</a>
+    </div>
+    
+    <div class="card">
+      <h3>The "Lunchtime" Glow</h3>
+      <span class="price">$85</span>
+      <p>30-Minute Express HydroFacial. Cleanse, Exfoliate, Hydrate. No downtime.</p>
+      <a href="sms:+15169624108?body=Book%20Lunchtime%20Glow" class="book-link">Reserve</a>
     </div>
 
     <div class="card">
-      <h3>First Glow Special</h3>
-      <span class="price">$75 <span style="font-size:0.9rem; text-decoration: line-through; color: #666;">$125</span></span>
-      <ul>
-        <li>Full Express HydroFacial</li>
-        <li>Introductory offer for new clients</li>
-        <li>Limited availability per week</li>
-      </ul>
-      <a href="sms:+15169624108?body=GLOW50%20Coupon" style="color: var(--gold); text-decoration: none; font-weight: 800; border-bottom: 1px solid var(--gold);">CLAIM OFFER</a>
+      <h3>Back & Body Detox</h3>
+      <span class="price">$150</span>
+      <p>Full Hydro-treatment for the back. Clears "bacne" and smooths texture.</p>
+      <a href="sms:+15169624108?body=Book%20Back%20Detox" class="book-link">Reserve</a>
     </div>
   </div>
 </section>
 
-<section class="section hair-section">
-  <div class="hair-flex">
-    <div class="hair-text">
-      <h2 style="font-family: 'Playfair Display'; font-size: 2.5rem; margin-bottom: 20px; color: var(--gold);">Genetic Hair Restoration</h2>
-      <p style="margin-bottom: 20px; color: #ccc;">Stop guessing. We use genetic mapping of maternal and paternal history to create a custom stimulation protocol.</p>
-      <ul style="list-style: none; margin-bottom: 30px;">
-        <li style="margin-bottom: 10px;"><i class="fas fa-dna" style="color: var(--sage); margin-right: 10px;"></i> DNA-Based Analysis</li>
-        <li style="margin-bottom: 10px;"><i class="fas fa-lightbulb" style="color: var(--sage); margin-right: 10px;"></i> Bio-Light LED Follicle Therapy</li>
-        <li style="margin-bottom: 10px;"><i class="fas fa-prescription-bottle" style="color: var(--sage); margin-right: 10px;"></i> Medical-Grade Minoxidil Routing</li>
-      </ul>
-      <a href="sms:+15169624108" class="btn btn-primary">Consult A Nurse</a>
+<section class="addon-section">
+  <div class="section-title">
+    <p>Enhancements</p>
+    <h2 style="font-size: 2rem;">Clinical Add-Ons</h2>
+    <p style="font-size: 0.8rem; margin-top: 10px; color: #666;">Customize your treatment.</p>
+  </div>
+
+  <div class="addon-grid">
+    <div class="addon-card">
+      <h4>RF Skin Tightening</h4>
+      <div class="add-price">+$25</div>
+      <span>Radio Frequency Contouring</span>
     </div>
-    <div class="hair-img"></div>
+    
+    <div class="addon-card">
+      <h4>Ultrasonic Extraction</h4>
+      <div class="add-price">+$20</div>
+      <span>Deep Pore Scrubber</span>
+    </div>
+
+    <div class="addon-card">
+      <h4>Cryo-Hammer Seal</h4>
+      <div class="add-price">+$15</div>
+      <span>Cold Therapy Pore Closure</span>
+    </div>
+
+    <div class="addon-card">
+      <h4>Oxygen Jet Infusion</h4>
+      <div class="add-price">+$25</div>
+      <span>High-Pressure Vitamin Spray</span>
+    </div>
+
+    <div class="addon-card">
+      <h4>Nano-Mesotherapy</h4>
+      <div class="add-price">+$30</div>
+      <span>Needle-Free Serum Injection</span>
+    </div>
+
+    <div class="addon-card">
+      <h4>High Frequency</h4>
+      <div class="add-price">+$15</div>
+      <span>Zap Bacteria / Acne Kill</span>
+    </div>
   </div>
 </section>
 
-<div class="location-box">
-  <h2 style="font-family: 'Playfair Display'; margin-bottom: 20px;">Service Area & Hours</h2>
-  <p style="margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
-    To maintain the highest standard of care, we limit our service radius to ensure punctuality and precision.
-  </p>
-  <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; margin-bottom: 30px;">
-    <div>
-      <h4 style="color: var(--gold); margin-bottom: 10px;">COVERAGE</h4>
-      <p>Great Neck • Manhasset</p>
-      <p>Roslyn • Queens</p>
-    </div>
-    <div>
-      <h4 style="color: var(--gold); margin-bottom: 10px;">HOURS</h4>
-      <p>Mon - Sun: 8:00 AM - 8:00 PM</p>
-      <p><em>By Appointment Only</em></p>
-    </div>
+<section class="mask-bar">
+  <h2 style="font-family: 'Playfair Display'; color: var(--gold); margin-bottom: 20px;">The Mask Bar</h2>
+  <p style="color: #aaa; font-size: 0.9rem;">Finish any treatment with a clinical-grade mask.</p>
+  
+  <div class="mask-list">
+    <div class="mask-item">Bio-Light LED Therapy <span class="tag">$25</span></div>
+    <div class="mask-item">24K Gold Jelly Mask <span class="tag">$30</span></div>
+    <div class="mask-item">Egyptian Rose Jelly <span class="tag">$30</span></div>
+    <div class="mask-item">Hyaluronic Sheet Relief <span class="tag">$15</span></div>
+    <div class="mask-item">Charcoal Detox Peel <span class="tag">$20</span></div>
   </div>
-  <a href="sms:+15169624108" class="btn" style="background: black; color: white; border: none;">Check Availability in Your Area</a>
-</div>
+</section>
+
+<section style="background: white; color: black; padding: 60px 5%; text-align: center;">
+  <h2 style="font-family: 'Playfair Display'; margin-bottom: 20px;">Service Area</h2>
+  <p style="font-weight: 700; color: var(--gold); text-transform: uppercase;">By Appointment Only</p>
+  <div style="margin-top: 20px;">
+    <p>Great Neck • Manhasset • Roslyn • Queens</p>
+  </div>
+  <a href="sms:+15169624108" style="display:inline-block; margin-top:20px; color:black; font-weight:800; border-bottom:1px solid black; text-decoration:none;">CHECK YOUR AREA</a>
+</section>
 
 <footer>
   <p style="color: var(--gold); font-weight: bold; margin-bottom: 10px;">EVEPRO SERVICES LLC</p>
-  <p>Operated by Licensed Professionals.</p>
-  <p style="margin-top: 10px; font-size: 0.7rem; opacity: 0.6;">© 2026 EvePro Glow. All Rights Reserved.</p>
+  <p style="margin-top: 10px; font-size: 0.7rem; opacity: 0.6;">© 2026 EvePro Glow. Nurse-Led Mobile Aesthetics.</p>
 </footer>
 
 </body>
 </html>
+<section style="background: #111; padding: 60px 5%; border-top: 1px solid #333;">
+  <div class="section-title" style="margin-bottom: 30px;">
+    <h2 style="font-size: 2rem;">The Concierge Protocol</h2>
+  </div>
+  <div class="grid">
+    <div style="text-align: center; padding: 20px;">
+      <i class="fas fa-pump-medical" style="font-size: 2rem; color: var(--gold); margin-bottom: 15px;"></i>
+      <h4 style="color: white; margin-bottom: 10px; font-family: 'Playfair Display';">Hospital-Grade Sterile</h4>
+      <p style="color: #888; font-size: 0.9rem;">All instruments are autoclaved and sealed. We adhere to strict clinical sanitation standards.</p>
+    </div>
+    <div style="text-align: center; padding: 20px;">
+      <i class="fas fa-couch" style="font-size: 2rem; color: var(--gold); margin-bottom: 15px;"></i>
+      <h4 style="color: white; margin-bottom: 10px; font-family: 'Playfair Display';">We Bring Everything</h4>
+      <p style="color: #888; font-size: 0.9rem;">From the spa bed to the lighting. All we need is a standard outlet. You don't lift a finger.</p>
+    </div>
+    <div style="text-align: center; padding: 20px;">
+      <i class="fas fa-sparkles" style="font-size: 2rem; color: var(--gold); margin-bottom: 15px;"></i>
+      <h4 style="color: white; margin-bottom: 10px; font-family: 'Playfair Display';">Zero-Mess Guarantee</h4>
+      <p style="color: #888; font-size: 0.9rem;">We use protective flooring mats and leave your space exactly as immaculate as we found it.</p>
+    </div>
+  </div>
+</section>
 
+<section style="background: linear-gradient(45deg, #D4AF37, #F1C40F); color: black; padding: 60px 5%; text-align: center;">
+  <h2 style="font-family: 'Playfair Display'; font-size: 2.5rem; margin-bottom: 10px;">The Inner Circle</h2>
+  <p style="font-weight: 700; margin-bottom: 30px;">Priority Access. Member-Only Pricing.</p>
+  
+  <div style="background: white; max-width: 500px; margin: 0 auto; padding: 40px; border: 1px solid black; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+    <h3 style="font-family: 'Playfair Display'; font-size: 2rem; margin-bottom: 5px;">Monthly Glow</h3>
+    <div style="font-size: 3rem; font-weight: 900; margin-bottom: 20px;">$199<span style="font-size: 1rem; font-weight: 400;">/mo</span></div>
+    <ul style="text-align: left; list-style: none; margin-bottom: 30px; font-size: 0.9rem;">
+      <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: green; margin-right: 10px;"></i> <strong>1 Signature Fusion Facial</strong> (Value $229)</li>
+      <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: green; margin-right: 10px;"></i> <strong>Free LED Mask Add-On</strong> (Value $25)</li>
+      <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: green; margin-right: 10px;"></i> <strong>Priority Booking</strong> (Skip the waitlist)</li>
+      <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: green; margin-right: 10px;"></i> <strong>10% Off All Other Services</strong></li>
+    </ul>
+    <a href="sms:+15169624108?body=I%20want%20to%20join%20the%20Glow%20Club" style="background: black; color: white; padding: 15px 30px; text-decoration: none; text-transform: uppercase; font-weight: 800; display: inline-block;">Join The Club</a>
+  </div>
+</section>
