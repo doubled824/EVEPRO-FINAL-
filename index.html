@@ -1,357 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EVEPRO GLOW | Elite Concierge Aesthetics Long Island</title>
-    <meta name="description" content="Nurse-led concierge HydroFacials, LED therapy, and hair restoration in Great Neck & Long Island. Clinical results in your home.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EVEPRO GLOW | Elite Concierge Aesthetics</title>
+<meta name="description" content="Nurse-led concierge HydroFacials and 7-Million Pixel AI Skin Analysis in Great Neck & Long Island.">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <style>
-        :root {
-            --gold: #D4AF37;
-            --black: #080808;
-            --dark-grey: #121212;
-            --white: #ffffff;
-            --sage: #4A6C58;
-            --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
+<style>
+:root {
+  --gold: #D4AF37;
+  --black: #080808;
+  --dark-grey: #121212;
+  --white: #ffffff;
+}
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
-        body { background-color: var(--black); color: var(--white); font-family: 'Montserrat', sans-serif; line-height: 1.6; overflow-x: hidden; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background-color: var(--black); color: var(--white); font-family: 'Montserrat', sans-serif; line-height: 1.6; overflow-x: hidden; }
 
-        /* URGENCY BAR */
-        .urgency-bar {
-            background: var(--gold); color: var(--black); text-align: center; padding: 10px;
-            font-weight: 800; text-transform: uppercase; font-size: 11px; letter-spacing: 2px;
-            position: fixed; width: 100%; top: 0; z-index: 2000;
-        }
+/* URGENCY BAR */
+.urgency-bar {
+  background: var(--gold); color: var(--black); text-align: center; padding: 10px;
+  font-weight: 800; text-transform: uppercase; font-size: 12px; letter-spacing: 1px;
+  position: fixed; width: 100%; top: 0; z-index: 2000;
+}
 
-        /* NAV */
-        nav {
-            position: fixed; top: 35px; width: 100%; background: rgba(8, 8, 8, 0.85);
-            padding: 15px 5%; display: flex; justify-content: space-between; align-items: center;
-            z-index: 1000; border-bottom: 1px solid rgba(212,175,55,0.2); backdrop-filter: blur(15px);
-        }
-        .logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 900; letter-spacing: 1px; }
-        .logo span { color: var(--gold); }
+/* NAV */
+nav {
+  position: fixed; top: 35px; width: 100%; background: rgba(8, 8, 8, 0.95);
+  padding: 20px 5%; display: flex; justify-content: space-between; align-items: center;
+  z-index: 1000; border-bottom: 1px solid rgba(212,175,55,0.3); backdrop-filter: blur(10px);
+}
+.logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 900; letter-spacing: 1px; }
+.logo span { color: var(--gold); }
 
-        /* HERO */
-        .hero {
-            height: 95vh; display: flex; align-items: center; justify-content: center; text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=2070');
-            background-size: cover; background-position: center; padding: 0 5%;
-        }
-        .hero-content { max-width: 800px; margin-top: 50px; }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.8rem, 7vw, 5rem); line-height: 1; margin-bottom: 25px; }
-        .hero h1 span { color: var(--gold); }
-        
-        /* BUTTONS */
-        .btn-primary { 
-            background: var(--gold); color: var(--black); padding: 20px 45px; 
-            text-transform: uppercase; font-weight: 800; letter-spacing: 2px; 
-            text-decoration: none; border: 1px solid var(--gold); display: inline-block; 
-            transition: var(--transition);
-        }
-        .btn-primary:hover { background: white; border-color: white; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(212,175,55,0.2); }
+/* HERO */
+.hero {
+  height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=2070');
+  background-size: cover; background-position: center; margin-top: 35px;
+}
+.hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; margin-bottom: 20px; }
+.hero h1 span { color: var(--gold); }
+.btn-primary { background: var(--gold); color: var(--black); padding: 18px 40px; text-transform: uppercase; font-weight: 800; letter-spacing: 2px; text-decoration: none; border: 1px solid var(--gold); display: inline-block; transition:0.3s;}
+.btn-primary:hover { background: white; border-color: white; transform: translateY(-3px); }
 
-        /* SECTION STYLES */
-        .section { padding: 100px 5%; }
-        .section-title { text-align: center; margin-bottom: 60px; }
-        .section-title h2 { font-family: 'Playfair Display'; font-size: clamp(2rem, 4vw, 3.5rem); color: var(--white); }
-        .section-title p { color: var(--gold); text-transform: uppercase; letter-spacing: 4px; font-size: 0.85rem; font-weight: 600; margin-bottom: 10px; }
+/* SECTIONS */
+.section { padding: 80px 5%; }
+.section-title { text-align: center; margin-bottom: 50px; }
+.section-title h2 { font-family: 'Playfair Display'; font-size: 3rem; color: var(--white); }
+.section-title p { color: var(--gold); text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; }
 
-        /* GRID STYLES */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
-        .card {
-            background: var(--dark-grey); border: 1px solid #222; padding: 45px 35px;
-            transition: var(--transition); position: relative; overflow: hidden; display: flex; flex-direction: column;
-        }
-        .card:hover { border-color: var(--gold); transform: translateY(-8px); background: #181818; }
-        .card h3 { font-family: 'Playfair Display'; font-size: 1.8rem; margin-bottom: 12px; }
-        .card .price { font-size: 1.5rem; color: var(--gold); font-weight: 800; display: block; margin-bottom: 20px; }
-        .card p { font-size: 0.95rem; color: #aaa; margin-bottom: 25px; flex-grow: 1;}
-        
-        .book-link { 
-            color: var(--white); text-decoration: none; font-weight: 800; 
-            border-bottom: 2px solid var(--gold); align-self: flex-start; 
-            text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;
-            padding-bottom: 4px; transition: 0.3s;
-        }
-        .book-link:hover { color: var(--gold); }
+/* AI ANALYZER SECTION */
+.ai-section { background: #000; border-top: 1px solid #222; }
+.ai-flex { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
+.ai-image { flex: 1; min-width: 300px; text-align: center; }
+.ai-image img { max-width: 100%; border: 1px solid var(--gold); box-shadow: 0 0 30px rgba(212,175,55,0.2); }
 
-        /* ADD-ONS SECTION */
-        .addon-section { background: #0f0f0f; padding: 100px 5%; border-top: 1px solid #222; }
-        .addon-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; }
-        .addon-card {
-            background: black; border: 1px solid #222; padding: 25px; text-align: center; transition: 0.3s;
-        }
-        .addon-card:hover { border-color: var(--gold); }
-        .addon-card h4 { font-family: 'Playfair Display'; font-size: 1.1rem; color: white; margin-bottom: 8px; }
-        .addon-card .add-price { color: var(--gold); font-weight: 900; font-size: 1.2rem; }
-        .addon-card span { display: block; font-size: 0.7rem; color: #666; margin-top: 8px; text-transform: uppercase; letter-spacing: 1px; }
+/* JOURNEY SECTION */
+.journey-step { text-align: center; padding: 20px; }
+.journey-step i { color: var(--gold); font-size: 2.5rem; margin-bottom: 15px; }
 
-        /* MASK BAR */
-        .mask-bar { padding: 100px 5%; text-align: center; background: var(--black); }
-        .mask-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 40px; }
-        .mask-item {
-            background: var(--dark-grey); padding: 15px 30px; border: 1px solid #222; border-radius: 50px;
-            color: white; font-weight: 600; display: flex; align-items: center; gap: 10px; transition: 0.3s;
-        }
-        .mask-item:hover { border-color: var(--gold); background: #1a1a1a; }
-        .mask-item .tag { background: var(--gold); color: black; padding: 3px 10px; font-size: 0.75rem; font-weight: 900; border-radius: 20px; }
+/* RESULTS GRID */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+.card {
+  background: var(--dark-grey); border: 1px solid #333; padding: 0;
+  transition: 0.3s; position: relative; overflow: hidden; display: flex; flex-direction: column;
+}
+.card img { width: 100%; height: 280px; object-fit: cover; border-bottom: 1px solid var(--gold); }
+.card-body { padding: 25px; }
 
-        /* MEMBERSHIP CARD */
-        .membership-card {
-            background: white; max-width: 550px; margin: 0 auto; padding: 50px; 
-            border: 1px solid black; box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-            position: relative; overflow: hidden;
-        }
+footer { background: black; padding: 50px 5%; text-align: center; font-size: 0.8rem; color: #555; border-top: 1px solid #222; }
 
-        /* FOOTER */
-        footer { background: black; padding: 60px 5%; text-align: center; font-size: 0.85rem; color: #444; border-top: 1px solid #111; }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.8rem; }
-            .section { padding: 60px 5%; }
-            .membership-card { padding: 30px 20px; }
-        }
-    </style>
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.5rem; }
+}
+</style>
 </head>
 <body>
 
 <div class="urgency-bar">Only 4 "Concierge" Appointments Remaining This Week</div>
 
 <nav>
-    <div class="logo">EVEPRO <span>GLOW</span></div>
-    <a href="sms:+15169624108" style="color: var(--white); font-size: 1.3rem;"><i class="fas fa-comment-medical"></i></a>
+  <div class="logo">EVEPRO <span>GLOW</span></div>
+  <a href="sms:+15169624108" style="color: var(--white); font-size: 1.5rem;"><i class="fas fa-comment-dots"></i></a>
 </nav>
 
 <section class="hero">
-    <div class="hero-content">
-        <p style="text-transform: uppercase; letter-spacing: 5px; color: var(--gold); margin-bottom: 15px; font-weight: 600;">Elite Concierge Aesthetics</p>
-        <h1>CLINICAL RESULTS.<br><span>WITHOUT THE CLINIC.</span></h1>
-        <p style="margin-bottom: 40px; color: #ccc; font-size: 1.1rem; font-weight: 300;">Nurse-Led Mobile HydroFacials & Medical Grade Skincare.</p>
-        <a href="sms:+15169624108" class="btn-primary">Text to Book Now</a>
-    </div>
+  <div>
+    <h1>CLINICAL RESULTS.<br><span>WITHOUT THE CLINIC.</span></h1>
+    <p style="margin-bottom: 30px; color: #ccc;">Nurse-Administered Concierge Aesthetics.</p>
+    <a href="sms:+15169624108" class="btn-primary">Text to Book</a>
+  </div>
 </section>
 
 <section class="section">
-    <div class="section-title">
-        <p>Expert Protocols</p>
-        <h2>The Treatment Menu</h2>
+  <div class="section-title">
+    <p>How it Works</p>
+    <h2>The Private Glow Ritual</h2>
+  </div>
+  <div class="grid">
+    <div class="journey-step">
+      <i class="fas fa-home"></i>
+      <h3>1. Clinical Arrival</h3>
+      <p>Our nurse arrives at your home maintaining total cleanliness. We set up a hospital-grade sterile environment in your preferred space.</p>
     </div>
-    
-    <div class="grid">
-        <div class="card">
-            <span style="position: absolute; top:0; right:0; background:var(--gold); color:black; padding:8px 20px; font-weight:bold; font-size:0.75rem; letter-spacing: 1px;">MOST POPULAR</span>
-            <h3>Glass Skin Fusion</h3>
-            <span class="price">$229</span>
-            <p>The 90-min "Everything" protocol. Deep H2-O2 cleansing, oxygen dome therapy, and RF tightening for an immediate red-carpet glow.</p>
-            <a href="sms:+15169624108?body=Book%20Glass%20Skin" class="book-link">Reserve Appointment</a>
-        </div>
-
-        <div class="card">
-            <h3>Acne Defense</h3>
-            <span class="price">$185</span>
-            <p>Targeted High-Frequency bacteria neutralization, ultrasonic extraction, and Blue-Light LED therapy to calm active breakouts.</p>
-            <a href="sms:+15169624108?body=Book%20Acne%20Defense" class="book-link">Reserve Appointment</a>
-        </div>
-
-        <div class="card">
-            <h3>Hair Restoration</h3>
-            <span class="price">$250</span>
-            <p>Scalp revitalization using RF Technology and Bio-Light to reactive dormant follicles and improve density. Best in 4-session cycles.</p>
-            <a href="sms:+15169624108?body=Book%20Hair%20Restoration" class="book-link">Reserve Appointment</a>
-        </div>
-
-        <div class="card">
-            <h3>Gentlemen's Refining</h3>
-            <span class="price">$95</span>
-            <p>Engineered for thicker skin and beard health. Focuses on deep pore steam, exfoliation, and anti-irritation protocols.</p>
-            <a href="sms:+15169624108?body=Book%20Mens%20Refining" class="book-link">Reserve Appointment</a>
-        </div>
-        
-        <div class="card">
-            <h3>"Lunchtime" Glow</h3>
-            <span class="price">$85</span>
-            <p>The 30-Minute Express HydroFacial. Cleanse, Exfoliate, Hydrate. Perfect maintenance for the busy professional.</p>
-            <a href="sms:+15169624108?body=Book%20Lunchtime%20Glow" class="book-link">Reserve Appointment</a>
-        </div>
-
-        <div class="card">
-            <h3>Back & Body Detox</h3>
-            <span class="price">$150</span>
-            <p>Full Hydro-treatment for the back area. Clears "bacne," smooths texture, and deep cleanses hard-to-reach areas.</p>
-            <a href="sms:+15169624108?body=Book%20Back%20Detox" class="book-link">Reserve Appointment</a>
-        </div>
+    <div class="journey-step">
+      <i class="fas fa-clipboard-check"></i>
+      <h3>2. Goal Re-Affirmation</h3>
+      <p>We already know your history. We quickly re-affirm your skin goals to ensure every minute of the session is targeted.</p>
     </div>
+    <div class="journey-step">
+      <i class="fas fa-microscope"></i>
+      <h3>3. 7-Million Pixel Scan</h3>
+      <p>We utilize the AI Skin Analyzer to see beneath the surface, establishing your baseline and scientific starting point.</p>
+    </div>
+  </div>
 </section>
 
-<section class="addon-section">
-    <div class="section-title">
-        <p>Customizations</p>
-        <h2 style="font-size: 2.2rem;">Clinical Enhancements</h2>
+<section class="section ai-section">
+  <div class="ai-flex">
+    <div class="ai-image">
+       <img src="ai_9187.jpeg" alt="EvePro Glow AI Analyzer">
     </div>
-
-    <div class="addon-grid">
-        <div class="addon-card">
-            <h4>RF Tightening</h4>
-            <div class="add-price">+$25</div>
-            <span>Radio Frequency</span>
-        </div>
-        <div class="addon-card">
-            <h4>Ultrasonic</h4>
-            <div class="add-price">+$20</div>
-            <span>Deep Scrubbing</span>
-        </div>
-        <div class="addon-card">
-            <h4>Cryo-Hammer</h4>
-            <div class="add-price">+$15</div>
-            <span>Pore Closure</span>
-        </div>
-        <div class="addon-card">
-            <h4>Oxygen Jet</h4>
-            <div class="add-price">+$25</div>
-            <span>Vitamin Spray</span>
-        </div>
-        <div class="addon-card">
-            <h4>Nano-Meso</h4>
-            <div class="add-price">+$30</div>
-            <span>Needle-Free</span>
-        </div>
-        <div class="addon-card">
-            <h4>High Freq</h4>
-            <div class="add-price">+$15</div>
-            <span>Acne Kill</span>
-        </div>
+    <div class="ai-text">
+      <p style="color: var(--gold); text-transform: uppercase; font-weight: bold;">Precision Diagnostics</p>
+      <h2 style="font-family: 'Playfair Display'; font-size: 2.5rem; margin-bottom: 20px;">Data-Driven Skincare</h2>
+      <p>Our 7-million pixel AI technology removes the guesswork. By establishing your baseline, we can track your progress session-by-session with sub-dermal precision. You don't just feel the difference—you see the data.</p>
+      <a href="sms:+15169624108?body=I%20want%20a%20Skin%20Analysis" class="btn-primary" style="margin-top: 20px;">Start Your Baseline</a>
     </div>
+  </div>
 </section>
 
-<section style="background: #080808; padding: 100px 5%; border-top: 1px solid #222;">
-    <div class="section-title">
-        <p>The Standard</p>
-        <h2>Mobile Clinical Excellence</h2>
+<section class="section">
+  <div class="section-title">
+    <p>Proven Transformations</p>
+    <h2>Clinical Gallery</h2>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <img src="IMG_9185.jpeg" alt="Acne Results">
+      <div class="card-body">
+        <h3 style="color: var(--gold);">Acne & Texture</h3>
+        <p>Visible reduction in sub-dermal congestion and texture refinement.</p>
+      </div>
     </div>
-    <div class="grid">
-        <div style="text-align: center; padding: 20px;">
-            <i class="fas fa-pump-medical" style="font-size: 2.5rem; color: var(--gold); margin-bottom: 20px;"></i>
-            <h4 style="color: white; margin-bottom: 12px; font-family: 'Playfair Display'; font-size: 1.4rem;">Hospital-Grade Sterile</h4>
-            <p style="color: #777; font-size: 0.95rem;">All instruments are autoclaved. We adhere to strict nurse-led clinical sanitation standards.</p>
-        </div>
-        <div style="text-align: center; padding: 20px;">
-            <i class="fas fa-couch" style="font-size: 2.5rem; color: var(--gold); margin-bottom: 20px;"></i>
-            <h4 style="color: white; margin-bottom: 12px; font-family: 'Playfair Display'; font-size: 1.4rem;">White Glove Setup</h4>
-            <p style="color: #777; font-size: 0.95rem;">We bring the spa bed, clinical lighting, and equipment. All we need is a standard outlet.</p>
-        </div>
-        <div style="text-align: center; padding: 20px;">
-            <i class="fas fa-sparkles" style="font-size: 2.5rem; color: var(--gold); margin-bottom: 20px;"></i>
-            <h4 style="color: white; margin-bottom: 12px; font-family: 'Playfair Display'; font-size: 1.4rem;">Zero-Mess Promise</h4>
-            <p style="color: #777; font-size: 0.95rem;">We use medical-grade protective flooring and leave your space exactly as immaculate as we found it.</p>
-        </div>
+    <div class="card">
+      <img src="IMG_9184.png" alt="Inflammation Relief">
+      <div class="card-body">
+        <h3 style="color: var(--gold);">Inflammation Calming</h3>
+        <p>Immediate relief for rosacea-prone and sensitive skin types.</p>
+      </div>
     </div>
+    <div class="card">
+      <img src="IMG_9317.jpeg" alt="Wrinkle Rejuvenation">
+      <div class="card-body">
+        <h3 style="color: var(--gold);">Advanced Rejuvenation</h3>
+        <p>Targeted wrinkle reduction using RF and LED Bio-Light technology.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="mask-bar">
-    <h2 style="font-family: 'Playfair Display'; color: var(--gold); margin-bottom: 15px; font-size: 2.5rem;">The Mask Bar</h2>
-    <p style="color: #777; margin-bottom: 40px;">Finish any protocol with a clinical-grade infusion.</p>
-    
-    <div class="mask-list">
-        <div class="mask-item">Bio-Light LED Therapy <span class="tag">$25</span></div>
-        <div class="mask-item">24K Gold Jelly <span class="tag">$30</span></div>
-        <div class="mask-item">Egyptian Rose Jelly <span class="tag">$30</span></div>
-        <div class="mask-item">Hyaluronic Relief <span class="tag">$15</span></div>
-        <div class="mask-item">Charcoal Detox <span class="tag">$20</span></div>
+<section class="section" style="background: #050505;">
+  <div class="ai-flex" style="flex-direction: row-reverse;">
+    <div class="ai-image">
+       <img src="ledtwo.jpeg" alt="LED Bio Light Arches">
     </div>
-</section>
-
-<section style="background: linear-gradient(45deg, #D4AF37, #F1C40F); color: black; padding: 100px 5%; text-align: center;">
-    <h2 style="font-family: 'Playfair Display'; font-size: clamp(2.2rem, 5vw, 3.5rem); margin-bottom: 10px;">The Inner Circle</h2>
-    <p style="font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 40px; opacity: 0.8;">Priority Access • Exclusive Pricing</p>
-    
-    <div class="membership-card">
-        <h3 style="font-family: 'Playfair Display'; font-size: 2.2rem; margin-bottom: 5px;">Monthly Glow</h3>
-        <div style="font-size: 3.5rem; font-weight: 900; margin-bottom: 25px; letter-spacing: -2px;">$199<span style="font-size: 1.2rem; font-weight: 400; letter-spacing: 0;">/mo</span></div>
-        <ul style="text-align: left; list-style: none; margin-bottom: 40px; font-size: 1rem;">
-            <li style="margin-bottom: 15px; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #4A6C58; margin-right: 12px;"></i> <strong>1 Signature Fusion Facial</strong> (Value $229)</li>
-            <li style="margin-bottom: 15px; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #4A6C58; margin-right: 12px;"></i> <strong>Free LED Mask Add-On</strong> (Value $25)</li>
-            <li style="margin-bottom: 15px; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #4A6C58; margin-right: 12px;"></i> <strong>Priority Booking</strong> (Skip the waitlist)</li>
-            <li style="margin-bottom: 15px; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #4A6C58; margin-right: 12px;"></i> <strong>10% Off All Other Services</strong></li>
-        </ul>
-        <a href="sms:+15169624108?body=I%20want%20to%20join%20the%20Glow%20Club" style="background: black; color: white; padding: 20px 40px; text-decoration: none; text-transform: uppercase; font-weight: 800; display: block; letter-spacing: 2px; transition: 0.3s;">Join The Club</a>
+    <div class="ai-text">
+      <p style="color: var(--gold); text-transform: uppercase; font-weight: bold;">Advanced Modalities</p>
+      <h2 style="font-family: 'Playfair Display'; font-size: 2.5rem; margin-bottom: 20px;">The Bio-Light Arch</h2>
+      <p>We utilize high-intensity LED spectrums to trigger cellular repair. Red light stimulates collagen, while blue light neutralizes acne-causing bacteria at the source.</p>
     </div>
-</section>
-
-<section style="background: white; color: black; padding: 80px 5%; text-align: center;">
-    <h2 style="font-family: 'Playfair Display'; margin-bottom: 15px; font-size: 2.5rem;">Service Area</h2>
-    <p style="font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px;">North Shore & Beyond</p>
-    <div style="font-size: 1.1rem; letter-spacing: 1px;">
-        <p>Great Neck • Manhasset • Roslyn • Queens • Port Washington</p>
-    </div>
-    <a href="sms:+15169624108" style="display:inline-block; margin-top:30px; color:black; font-weight:800; border-bottom:2px solid black; text-decoration:none; padding-bottom:5px;">CHECK YOUR ZIP CODE</a>
+  </div>
 </section>
 
 <footer>
-    <p style="color: var(--gold); font-weight: 800; letter-spacing: 2px; margin-bottom: 15px;">EVEPRO SERVICES LLC</p>
-    <p style="opacity: 0.5;">Licensed Nurse-Led Mobile Aesthetics.</p>
-    <p style="margin-top: 20px; font-size: 0.7rem; opacity: 0.3;">© 2026 EvePro Glow. All Rights Reserved.</p>
+  <img src="aiscreen.jpeg" style="width: 150px; opacity: 0.5; margin-bottom: 20px;" alt="EvePro Glow Screen">
+  <p style="color: var(--gold); font-weight: bold; margin-bottom: 10px;">EVEPRO SERVICES LLC</p>
+  <p>© 2026 EvePro Glow. Nurse-Led Mobile Aesthetics • Long Island, NY.</p>
 </footer>
 
 </body>
 </html>
-<section class="section" style="background: #0c0c0c;">
-  <div class="section-title">
-    <p>Proven Transformations</p>
-    <h2>Clinical Results</h2>
-  </div>
-
-  <div class="grid">
-    <div class="card" style="padding: 0; overflow: hidden;">
-      <img src="[Link to Image 2]" alt="Acne Defense Before and After" style="width: 100%; height: 250px; object-fit: cover;">
-      <div style="padding: 20px;">
-        <h4 style="font-family: 'Playfair Display'; color: var(--gold);">Acne & Texture Refinement</h4>
-        <p style="font-size: 0.8rem; margin-top: 5px;">Result after 2 sessions of our Acne Defense Protocol + High Frequency.</p>
-      </div>
-    </div>
-
-    <div class="card" style="padding: 0; overflow: hidden;">
-      <img src="[Link to Image 4]" alt="Glass Skin Fusion Results" style="width: 100%; height: 250px; object-fit: cover;">
-      <div style="padding: 20px;">
-        <h4 style="font-family: 'Playfair Display'; color: var(--gold);">Signature Glass Skin</h4>
-        <p style="font-size: 0.8rem; margin-top: 5px;">Immediate luminosity and hydration following the 90-min Fusion protocol.</p>
-      </div>
-    </div>
-
-    <div class="card" style="padding: 0; overflow: hidden;">
-      <img src="[Link to Image 1]" alt="Inflammation Reduction" style="width: 100%; height: 250px; object-fit: cover;">
-      <div style="padding: 20px;">
-        <h4 style="font-family: 'Playfair Display'; color: var(--gold);">Inflammation Calming</h4>
-        <p style="font-size: 0.8rem; margin-top: 5px;">Significant reduction in facial redness using our LED + Cryo-Hammer seal.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" style="background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('[Link to Image 3]'); background-size: cover; background-attachment: fixed;">
-  <div class="grid" style="align-items: center;">
-    <div>
-      <p style="color: var(--gold); text-transform: uppercase; letter-spacing: 3px; font-weight: 800;">Precision Diagnostics</p>
-      <h2 style="font-family: 'Playfair Display'; font-size: 3rem; margin: 20px 0;">7-Million Pixel<br><span>AI Skin Analysis</span></h2>
-      <p style="color: #ccc; margin-bottom: 30px;">Stop guessing with your skincare. Every EvePro Glow journey begins with a deep-tissue digital scan. Our AI analyzer detects underlying sun damage, hydration levels, and wrinkle depth before they are visible to the naked eye.</p>
-      <ul style="list-style: none; color: var(--gold); font-weight: 600; margin-bottom: 30px;">
-        <li style="margin-bottom: 10px;"><i class="fas fa-microscope" style="margin-right: 10px;"></i> Sub-Dermal Pigment Mapping</li>
-        <li style="margin-bottom: 10px;"><i class="fas fa-chart-line" style="margin-right: 10px;"></i> Wrinkle Status Assessment</li>
-        <li style="margin-bottom: 10px;"><i class="fas fa-vial" style="margin-right: 10px;"></i> 100% Data-Driven Product Selection</li>
-      </ul>
-      <a href="sms:+15169624108?body=I%20want%20a%20Skin%20Analysis" class="btn-primary">Get Your Report</a>
-    </div>
-    <div style="text-align: center;">
-        <img src="[Link to Image 3]" alt="AI Skin Analyzer" style="width: 100%; max-width: 400px; border: 1px solid var(--gold); box-shadow: 0 0 30px rgba(212,175,55,0.3);">
-    </div>
-  </div>
-</section>
