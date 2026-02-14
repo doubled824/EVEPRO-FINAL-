@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EVEPRO GLOW | Elite Concierge Aesthetics</title>
-<meta name="description" content="Nurse-led concierge HydroFacials and 7-Million Pixel AI Skin Analysis in Great Neck & Long Island.">
+<title>EVEPRO GLOW | Elite Clinical Aesthetics Long Island</title>
+<meta name="description" content="Physician-directed concierge HydroFacials and 7-Million Pixel AI Skin Analysis in Great Neck, Roslyn, & Manhasset.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,167 +22,156 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { background-color: var(--black); color: var(--white); font-family: 'Montserrat', sans-serif; line-height: 1.6; overflow-x: hidden; }
 
-/* URGENCY BAR */
 .urgency-bar {
   background: var(--gold); color: var(--black); text-align: center; padding: 10px;
-  font-weight: 800; text-transform: uppercase; font-size: 12px; letter-spacing: 1px;
+  font-weight: 800; text-transform: uppercase; font-size: 11px; letter-spacing: 2px;
   position: fixed; width: 100%; top: 0; z-index: 2000;
 }
 
-/* NAV */
 nav {
   position: fixed; top: 35px; width: 100%; background: rgba(8, 8, 8, 0.95);
-  padding: 20px 5%; display: flex; justify-content: space-between; align-items: center;
-  z-index: 1000; border-bottom: 1px solid rgba(212,175,55,0.3); backdrop-filter: blur(10px);
+  padding: 15px 5%; display: flex; justify-content: space-between; align-items: center;
+  z-index: 1000; border-bottom: 1px solid rgba(212,175,55,0.2); backdrop-filter: blur(10px);
 }
-.logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 900; letter-spacing: 1px; }
+.logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 900; }
 .logo span { color: var(--gold); }
 
-/* HERO */
 .hero {
-  height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center;
+  height: 85vh; display: flex; align-items: center; justify-content: center; text-align: center;
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=2070');
   background-size: cover; background-position: center; margin-top: 35px;
 }
-.hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; margin-bottom: 20px; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 20px; }
 .hero h1 span { color: var(--gold); }
-.btn-primary { background: var(--gold); color: var(--black); padding: 18px 40px; text-transform: uppercase; font-weight: 800; letter-spacing: 2px; text-decoration: none; border: 1px solid var(--gold); display: inline-block; transition:0.3s;}
+
+.btn-primary { background: var(--gold); color: var(--black); padding: 18px 40px; text-transform: uppercase; font-weight: 800; letter-spacing: 2px; text-decoration: none; border: 1px solid var(--gold); display: inline-block; transition: 0.3s; }
 .btn-primary:hover { background: white; border-color: white; transform: translateY(-3px); }
 
-/* SECTIONS */
+.trust-bar { background: #151515; padding: 30px 5%; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; text-align: center; border-bottom: 1px solid #222; }
+.trust-item { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #888; }
+.trust-item i { color: var(--gold); margin-right: 8px; }
+
 .section { padding: 80px 5%; }
 .section-title { text-align: center; margin-bottom: 50px; }
-.section-title h2 { font-family: 'Playfair Display'; font-size: 3rem; color: var(--white); }
-.section-title p { color: var(--gold); text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; }
+.section-title h2 { font-family: 'Playfair Display'; font-size: 2.8rem; margin-bottom: 10px; }
+.section-title p { color: var(--gold); text-transform: uppercase; letter-spacing: 4px; font-size: 0.8rem; font-weight: 800; }
 
-/* AI ANALYZER SECTION */
-.ai-section { background: #000; border-top: 1px solid #222; }
-.ai-flex { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
-.ai-image { flex: 1; min-width: 300px; text-align: center; }
-.ai-image img { max-width: 100%; border: 1px solid var(--gold); box-shadow: 0 0 30px rgba(212,175,55,0.2); }
-
-/* JOURNEY SECTION */
-.journey-step { text-align: center; padding: 20px; }
-.journey-step i { color: var(--gold); font-size: 2.5rem; margin-bottom: 15px; }
-
-/* RESULTS GRID */
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-.card {
-  background: var(--dark-grey); border: 1px solid #333; padding: 0;
-  transition: 0.3s; position: relative; overflow: hidden; display: flex; flex-direction: column;
-}
-.card img { width: 100%; height: 280px; object-fit: cover; border-bottom: 1px solid var(--gold); }
-.card-body { padding: 25px; }
+.card { background: var(--dark-grey); border: 1px solid #222; position: relative; overflow: hidden; transition: 0.3s; }
+.card:hover { border-color: var(--gold); transform: translateY(-5px); }
+.card img { width: 100%; height: 250px; object-fit: cover; border-bottom: 1px solid #333; }
+.card-body { padding: 30px; }
+.card h3 { font-family: 'Playfair Display'; font-size: 1.6rem; margin-bottom: 10px; }
+.price { color: var(--gold); font-weight: 900; font-size: 1.3rem; display: block; margin-bottom: 15px; }
 
-footer { background: black; padding: 50px 5%; text-align: center; font-size: 0.8rem; color: #555; border-top: 1px solid #222; }
+footer { background: black; padding: 60px 5%; text-align: center; color: #444; border-top: 1px solid #111; }
 
-@media (max-width: 768px) {
-  .hero h1 { font-size: 2.5rem; }
-}
+@media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } }
 </style>
 </head>
 <body>
 
-<div class="urgency-bar">Only 4 "Concierge" Appointments Remaining This Week</div>
+<div class="urgency-bar">Limited Concierge Appointments Available This Week</div>
 
 <nav>
   <div class="logo">EVEPRO <span>GLOW</span></div>
-  <a href="sms:+15169624108" style="color: var(--white); font-size: 1.5rem;"><i class="fas fa-comment-dots"></i></a>
+  <a href="sms:+15169624108" style="color: var(--white); font-size: 1.4rem;"><i class="fas fa-comment-medical"></i></a>
 </nav>
 
 <section class="hero">
   <div>
     <h1>CLINICAL RESULTS.<br><span>WITHOUT THE CLINIC.</span></h1>
-    <p style="margin-bottom: 30px; color: #ccc;">Nurse-Administered Concierge Aesthetics.</p>
-    <a href="sms:+15169624108" class="btn-primary">Text to Book</a>
+    <p style="margin-bottom: 30px; color: #ccc; font-weight: 300; letter-spacing: 1px;">Physician-Directed Mobile Aesthetics.</p>
+    <a href="sms:+15169624108" class="btn-primary">Request Consultation</a>
   </div>
 </section>
+
+<div class="trust-bar">
+  <div class="trust-item"><i class="fas fa-user-md"></i> Physician-Directed</div>
+  <div class="trust-item"><i class="fas fa-shield-virus"></i> Medical-Grade Sterile</div>
+  <div class="trust-item"><i class="fas fa-award"></i> 7-Million Pixel AI Analysis</div>
+</div>
 
 <section class="section">
   <div class="section-title">
-    <p>How it Works</p>
-    <h2>The Private Glow Ritual</h2>
+    <p>Data-Driven Diagnostics</p>
+    <h2>The 7-Million Pixel Scan</h2>
   </div>
-  <div class="grid">
-    <div class="journey-step">
-      <i class="fas fa-home"></i>
-      <h3>1. Clinical Arrival</h3>
-      <p>Our nurse arrives at your home maintaining total cleanliness. We set up a hospital-grade sterile environment in your preferred space.</p>
+  <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
+    <div style="flex: 1; min-width: 300px;">
+      <img src="ai_9187.jpeg" alt="Medical AI Analyzer" style="width: 100%; border: 1px solid var(--gold);">
     </div>
-    <div class="journey-step">
-      <i class="fas fa-clipboard-check"></i>
-      <h3>2. Goal Re-Affirmation</h3>
-      <p>We already know your history. We quickly re-affirm your skin goals to ensure every minute of the session is targeted.</p>
-    </div>
-    <div class="journey-step">
-      <i class="fas fa-microscope"></i>
-      <h3>3. 7-Million Pixel Scan</h3>
-      <p>We utilize the AI Skin Analyzer to see beneath the surface, establishing your baseline and scientific starting point.</p>
+    <div style="flex: 1.5; min-width: 300px;">
+      <h3 style="font-family: 'Playfair Display'; font-size: 2rem; margin-bottom: 20px;">Precision Baselines.</h3>
+      <p style="color: #aaa; margin-bottom: 20px;">Stop guessing with your skin. Our physician-directed protocols begin with a deep sub-dermal scan. By mapping your baseline with 7-million pixel accuracy, we create a bespoke medical treatment plan specifically for your cellular profile.</p>
+      <a href="sms:+15169624108?body=Request%20AI%20Analysis" class="btn-primary" style="padding: 12px 25px; font-size: 0.8rem;">Start Your Baseline</a>
     </div>
   </div>
 </section>
 
-<section class="section ai-section">
-  <div class="ai-flex">
-    <div class="ai-image">
-       <img src="ai_9187.jpeg" alt="EvePro Glow AI Analyzer">
-    </div>
-    <div class="ai-text">
-      <p style="color: var(--gold); text-transform: uppercase; font-weight: bold;">Precision Diagnostics</p>
-      <h2 style="font-family: 'Playfair Display'; font-size: 2.5rem; margin-bottom: 20px;">Data-Driven Skincare</h2>
-      <p>Our 7-million pixel AI technology removes the guesswork. By establishing your baseline, we can track your progress session-by-session with sub-dermal precision. You don't just feel the difference—you see the data.</p>
-      <a href="sms:+15169624108?body=I%20want%20a%20Skin%20Analysis" class="btn-primary" style="margin-top: 20px;">Start Your Baseline</a>
-    </div>
-  </div>
-</section>
-
-<section class="section">
+<section class="section" style="background: #080808;">
   <div class="section-title">
-    <p>Proven Transformations</p>
-    <h2>Clinical Gallery</h2>
+    <p>The Standard</p>
+    <h2>Mobile Clinical Excellence</h2>
   </div>
   <div class="grid">
-    <div class="card">
-      <img src="IMG_9185.jpeg" alt="Acne Results">
-      <div class="card-body">
-        <h3 style="color: var(--gold);">Acne & Texture</h3>
-        <p>Visible reduction in sub-dermal congestion and texture refinement.</p>
-      </div>
+    <div style="text-align: center; padding: 20px;">
+      <i class="fas fa-pump-medical" style="font-size: 2.5rem; color: var(--gold); margin-bottom: 20px;"></i>
+      <h4 style="color: white; margin-bottom: 12px; font-family: 'Playfair Display';">Hospital-Grade Sterile</h4>
+      <p style="color: #777; font-size: 0.95rem;">All instruments are autoclaved. We maintain strict medical sanitation standards for every in-home setup.</p>
     </div>
-    <div class="card">
-      <img src="IMG_9184.png" alt="Inflammation Relief">
-      <div class="card-body">
-        <h3 style="color: var(--gold);">Inflammation Calming</h3>
-        <p>Immediate relief for rosacea-prone and sensitive skin types.</p>
-      </div>
+    <div style="text-align: center; padding: 20px;">
+      <i class="fas fa-couch" style="font-size: 2.5rem; color: var(--gold); margin-bottom: 20px;"></i>
+      <h4 style="color: white; margin-bottom: 12px; font-family: 'Playfair Display';">White Glove Integration</h4>
+      <p style="color: #777; font-size: 0.95rem;">Our clinical team brings a full medical-spa setup, including specialized lighting and the OtoDerm H2O2 system.</p>
     </div>
-    <div class="card">
-      <img src="IMG_9317.jpeg" alt="Wrinkle Rejuvenation">
-      <div class="card-body">
-        <h3 style="color: var(--gold);">Advanced Rejuvenation</h3>
-        <p>Targeted wrinkle reduction using RF and LED Bio-Light technology.</p>
-      </div>
+    <div style="text-align: center; padding: 20px;">
+      <i class="fas fa-sparkles" style="font-size: 2.5rem; color: var(--gold); margin-bottom: 20px;"></i>
+      <h4 style="color: white; margin-bottom: 12px; font-family: 'Playfair Display';">Zero-Mess Guarantee</h4>
+      <p style="color: #777; font-size: 0.95rem;">We leave your residence exactly as we found it. All medical waste is removed and properly disposed of.</p>
     </div>
   </div>
 </section>
 
-<section class="section" style="background: #050505;">
-  <div class="ai-flex" style="flex-direction: row-reverse;">
-    <div class="ai-image">
-       <img src="ledtwo.jpeg" alt="LED Bio Light Arches">
+<section class="section" style="background: #0c0c0c;">
+  <div class="section-title">
+    <p>Clinical Protocols</p>
+    <h2>Treatment Menu</h2>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <img src="IMG_9185.jpeg" alt="Acne Protocol">
+      <div class="card-body">
+        <h3>Acne Defense</h3>
+        <span class="price">$185</span>
+        <p>A high-pressure medical protocol to neutralize bacteria and clear sub-dermal congestion.</p>
+        <a href="sms:+15169624108?body=Book%20Acne%20Defense" style="color: white; font-weight: 800; font-size: 0.7rem; text-decoration: none; border-bottom: 1px solid var(--gold);">RESERVE</a>
+      </div>
     </div>
-    <div class="ai-text">
-      <p style="color: var(--gold); text-transform: uppercase; font-weight: bold;">Advanced Modalities</p>
-      <h2 style="font-family: 'Playfair Display'; font-size: 2.5rem; margin-bottom: 20px;">The Bio-Light Arch</h2>
-      <p>We utilize high-intensity LED spectrums to trigger cellular repair. Red light stimulates collagen, while blue light neutralizes acne-causing bacteria at the source.</p>
+    <div class="card">
+      <img src="IMG_9184.png" alt="Glass Skin">
+      <div class="card-body">
+        <h3>Glass Skin Fusion</h3>
+        <span class="price">$229</span>
+        <p>The definitive 90-minute protocol. Includes H2-O2 deep cleanse, oxygen dome, and RF tightening.</p>
+        <a href="sms:+15169624108?body=Book%20Glass%20Skin" style="color: white; font-weight: 800; font-size: 0.7rem; text-decoration: none; border-bottom: 1px solid var(--gold);">RESERVE</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="IMG_9317.jpeg" alt="Anti-Aging">
+      <div class="card-body">
+        <h3>Medical Rejuvenation</h3>
+        <span class="price">$250</span>
+        <p>Physician-directed collagen stimulation using Bio-Light arches and RF frequency technology.</p>
+        <a href="sms:+15169624108?body=Book%20Rejuvenation" style="color: white; font-weight: 800; font-size: 0.7rem; text-decoration: none; border-bottom: 1px solid var(--gold);">RESERVE</a>
+      </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <img src="aiscreen.jpeg" style="width: 150px; opacity: 0.5; margin-bottom: 20px;" alt="EvePro Glow Screen">
-  <p style="color: var(--gold); font-weight: bold; margin-bottom: 10px;">EVEPRO SERVICES LLC</p>
-  <p>© 2026 EvePro Glow. Nurse-Led Mobile Aesthetics • Long Island, NY.</p>
+  <p style="color: var(--gold); font-weight: 800; margin-bottom: 10px; letter-spacing: 2px;">EVEPRO SERVICES LLC</p>
+  <p style="font-size: 0.7rem; opacity: 0.6;">© 2026 EvePro Glow. Licensed & Insured Medical Aesthetics • Long Island, NY.</p>
 </footer>
 
 </body>
