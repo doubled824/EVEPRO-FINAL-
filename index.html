@@ -3,104 +3,252 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EVEPRO GLOW | Mobile Clinical Performance Lab</title>
+  <meta name="description" content="Mobile AI-powered skin audits and bespoke clinical treatments delivered to your home in NYC & Long Island. Real sub-dermal results – no guesswork.">
+  <title>EVEPRO GLOW | Mobile Clinical Skin Performance</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+          colors: {
+            gold: {
+              300: '#fde047',
+              400: '#eab308',
+              500: '#ca8a04',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Calendly widget script -->
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
   <style>
-    body { background: #000; color: #fff; font-family: 'Inter', sans-serif; }
-    .glass { background: rgba(255,255,255,0.02); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); }
-    .gradient-text { background: linear-gradient(to right, #fbbf24, #d97706); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .neon-btn { transition: all 0.4s; box-shadow: 0 4px 15px rgba(0,0,0,0.4); }
-    .neon-btn:hover { transform: translateY(-2px); box-shadow: 0 0 30px rgba(234,179,8,0.4); }
+    body { 
+      background-color: #050505; 
+      color: #ffffff; 
+      overflow-x: hidden;
+    }
+    
+    .ambient-light {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(234,179,8,0.1) 0%, rgba(0,0,0,0) 70%);
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .glow-text { text-shadow: 0 0 40px rgba(234, 179, 8, 0.4); }
+    .text-gradient {
+      background: linear-gradient(to right, #fde047, #ca8a04);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .glass { 
+      background: rgba(20, 20, 20, 0.4); 
+      backdrop-filter: blur(16px); 
+      border: 1px solid rgba(234, 179, 8, 0.15); 
+    }
+    .glass-card {
+      background: linear-gradient(145deg, rgba(30,30,30,0.6) 0%, rgba(10,10,10,0.8) 100%);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-top: 1px solid rgba(234, 179, 8, 0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .glass-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 40px -10px rgba(234, 179, 8, 0.15);
+    }
+
+    .neon-btn { 
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+      position: relative;
+      overflow: hidden;
+    }
+    .neon-btn::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%; width: 50%; height: 100%;
+      background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
+      transform: skewX(-20deg);
+      transition: all 0.6s ease;
+    }
+    .neon-btn:hover::after { left: 150%; }
+    .neon-btn:hover { box-shadow: 0 0 30px rgba(234, 179, 8, 0.5); }
+
+    img { border-radius: 16px; box-shadow: 0 0 30px rgba(234,179,8,0.3); max-width: 100%; height: auto; display: block; margin: 1.5rem auto; }
   </style>
 </head>
-<body class="bg-black text-white antialiased">
+<body class="font-sans antialiased selection:bg-gold-400 selection:text-black">
 
-  <nav class="fixed top-0 left-0 right-0 z-50 glass border-b border-white/10">
+  <div class="ambient-light"></div>
+
+  <nav class="fixed top-0 left-0 right-0 z-50 glass border-b border-white/5 transition-all duration-300" id="navbar">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 bg-amber-400 rounded-full flex items-center justify-center text-black font-black text-xl italic">E</div>
-        <span class="text-2xl font-bold tracking-tighter uppercase">EVEPRO GLOW</span>
+      <div class="flex items-center gap-4 cursor-pointer" onclick="window.scrollTo(0,0)">
+        <div class="w-10 h-10 bg-gradient-to-br from-gold-300 to-gold-500 rounded-full flex items-center justify-center text-black font-serif italic font-bold text-xl shadow-[0_0_15px_rgba(234,179,8,0.4)]">E</div>
+        <h1 class="text-2xl font-serif tracking-widest uppercase">Evepro Glow</h1>
       </div>
-      <button class="neon-btn bg-amber-400 text-black px-6 py-2 rounded-full font-bold text-[10px] tracking-widest uppercase">Request Audit</button>
+      <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/eveproservices143/eveproglow'}); return false;"
+              class="neon-btn bg-gold-400 text-black px-7 py-2.5 rounded-full font-semibold text-xs uppercase tracking-widest hidden sm:inline-block">
+        Book Concierge
+      </button>
     </div>
   </nav>
 
-  <header class="min-h-screen flex items-center justify-center relative bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900 via-black to-black pt-24 pb-12">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <div class="inline-block border border-amber-400/50 text-amber-400 text-[10px] font-black px-4 py-1 rounded-full mb-8 tracking-[0.3em] uppercase italic">The Clinical Protocol</div>
-      <h1 class="text-6xl md:text-8xl font-bold tracking-tighter mb-8 leading-tight italic uppercase">We Don't Guess.<br><span class="gradient-text">We Audit.</span></h1>
+  <header class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+    <div class="max-w-5xl mx-auto px-6 text-center" data-aos="fade-up" data-aos-duration="1200">
+      <p class="text-gold-400 tracking-[0.3em] text-sm uppercase mb-6 font-medium">The Apex of Skin Science</p>
+      <h2 class="text-6xl md:text-8xl font-serif font-bold tracking-tight glow-text leading-tight mb-4">
+        EVEPRO <span class="text-gradient italic">GLOW</span>
+      </h2>
+      <p class="text-xl md:text-2xl text-gray-300 font-light mt-6 max-w-2xl mx-auto">
+        Elite Clinical Aesthetics & Bespoke Bronzing.
+      </p>
       
-      <div class="glass p-8 md:p-12 rounded-[40px] mb-12 text-left border-l-8 border-l-amber-400 max-w-3xl mx-auto">
-        <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 tracking-tight uppercase"><i class="fa-solid fa-shield-halved text-amber-400"></i> The Standard of Trust</h2>
-        <p class="text-gray-300 leading-relaxed text-lg mb-6">
-          I don't sell facials. I manage <strong>biological regimens</strong>. At EvePro Glow, we remove the "commercial fluff" and replace it with a clinical audit. 
-        </p>
-        <p class="text-gray-400 text-sm italic border-t border-white/10 pt-6">
-          "Every session begins with a 7-million pixel sub-dermal mapping. If I haven't seen what's happening beneath your skin, I have no business treating it." — Founder, EvePro Glow
+      <div class="glass inline-block mt-8 px-6 py-3 rounded-full border border-gold-400/20">
+        <p class="text-sm text-gray-300 tracking-wide">
+          <i class="fa-solid fa-user-doctor text-gold-400 mr-2"></i> Physician-Directed
+          <span class="mx-3 text-gray-600">|</span> 
+          <i class="fa-solid fa-microchip text-gold-400 mr-2"></i> AI-Powered
         </p>
       </div>
 
-      <button class="neon-btn bg-white text-black px-12 py-5 rounded-2xl font-black text-xl hover:bg-amber-400 transition flex items-center justify-center gap-4 mx-auto tracking-tighter">
-        <i class="fa-solid fa-microscope"></i> INITIALIZE AUDIT
-      </button>
+      <div class="flex flex-col sm:flex-row gap-6 justify-center mt-12">
+        <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/eveproservices143/eveproglow'}); return false;"
+                class="neon-btn bg-gold-400 text-black px-10 py-4 rounded-full font-bold tracking-widest text-sm uppercase">
+          Request Appointment
+        </button>
+        <a href="#menu" class="glass text-white px-10 py-4 rounded-full font-bold tracking-widest text-sm uppercase hover:bg-white/5 transition-all">
+          Explore Services
+        </a>
+      </div>
     </div>
   </header>
 
+  <!-- Calendly Inline Embed – placed right after hero for max conversions -->
+  <section class="py-16 bg-zinc-950">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h3 class="text-3xl font-serif font-bold mb-8 text-gold-400">Book Your In-Home Scan</h3>
+      <div class="calendly-inline-widget glass rounded-3xl overflow-hidden border border-amber-400/30 shadow-2xl"
+           data-url="https://calendly.com/eveproservices143/eveproglow"
+           style="min-width:320px; height:700px;"
+           data-resize="true"></div>
+    </div>
+  </section>
+
+  <!-- Your photos section (AI + Dome + Treatment + Results) -->
   <section class="py-24 bg-black">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold text-gold-400 mb-12">Our Technology in Action</h2>
+      <div class="grid md:grid-cols-2 gap-12">
+        <img src="ai-analyzer.jpg" alt="J.L.MAO AI Skin Analyzer">
+        <img src="dome-red.jpg" alt="O2toDerm Oxygen Dome">
+        <img src="treatment.jpg" alt="Glass Skin Treatment">
+        <img src="before-after.jpg" alt="Before & After Results">
+      </div>
+    </div>
+  </section>
+
+  <!-- Treatments -->
+  <section id="menu" class="py-24 bg-zinc-950 border-y border-white/10">
     <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold tracking-tighter mb-16 text-center italic uppercase">In-Home Signature Treatments</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <div class="glass p-10 rounded-[3rem] border-amber-400/20">
-          <h3 class="text-2xl font-bold mb-2 uppercase">The AI Audit</h3>
-          <p class="text-[10px] text-amber-400 font-black mb-6 tracking-widest uppercase">J.L.MAO Diagnostics</p>
-          <p class="text-gray-400 mb-8 text-sm italic">7-Million pixel deca-spectral mapping to identify 20 hidden skin markers. No guesswork.</p>
-          <div class="text-3xl font-bold text-white mb-8">$150</div>
-          <button class="w-full text-center border border-amber-400/30 text-amber-400 py-4 rounded-2xl font-black uppercase text-xs tracking-widest">Book Audit</button>
+
+        <div class="glass p-10 rounded-[3rem] border-amber-400/20 flex flex-col justify-between hover:border-amber-400/50 transition-colors duration-300">
+          <div>
+            <h3 class="text-2xl font-bold mb-2 uppercase">AI Skin Audit</h3>
+            <p class="text-[10px] text-amber-400 font-black mb-6 tracking-widest uppercase">60–90 Minute Deep Dive</p>
+            <p class="text-gray-400 mb-8 text-sm italic">Delivered to your home: high-resolution sub-dermal scan mapping hydration, pigmentation, collagen, UV damage.</p>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-white mb-8">$150</div>
+            <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/eveproservices143/eveproglow'}); return false;"
+                    class="w-full text-center border border-amber-400/30 text-amber-400 py-4 rounded-2xl font-black uppercase text-xs tracking-widest hover:bg-amber-400 hover:text-black transition cursor-pointer">
+              BOOK AUDIT
+            </button>
+          </div>
         </div>
 
-        <div class="glass p-10 rounded-[3rem] border-amber-400/50 relative overflow-hidden bg-zinc-900/40">
+        <div class="glass p-10 rounded-[3rem] border-amber-400/70 relative overflow-hidden bg-zinc-900/60 flex flex-col justify-between hover:-translate-y-2 transition-transform duration-300 shadow-[0_0_30px_rgba(251,191,36,0.1)]">
           <div class="absolute top-0 right-0 bg-amber-400 text-black px-4 py-1 text-[10px] font-black tracking-tighter uppercase">Signature</div>
-          <h3 class="text-2xl font-bold mb-2 uppercase">Glass Skin Fusion</h3>
-          <p class="text-[10px] text-amber-400 font-black mb-6 tracking-widest uppercase">O2toDerm + Hydro-Reset</p>
-          <p class="text-gray-400 mb-8 text-sm italic">90% Purified Oxygen infusion + Space Steamer detox + Cellular jelly mask reset.</p>
-          <div class="text-3xl font-bold text-white mb-8">$229</div>
-          <button class="w-full text-center bg-amber-400 text-black py-4 rounded-2xl font-black uppercase text-xs tracking-widest neon-btn">Execute Fusion</button>
+          <div>
+            <h3 class="text-2xl font-bold mb-2 uppercase">Glass Skin Fusion</h3>
+            <p class="text-[10px] text-amber-400 font-black mb-6 tracking-widest uppercase">Custom In-Home Protocol</p>
+            <p class="text-gray-400 mb-8 text-sm italic">Double thermal steam, H₂-O₂ bubble detox, oxygen infusion + bespoke clinical jelly mask.</p>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-white mb-8">$229</div>
+            <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/eveproservices143/eveproglow'}); return false;"
+                    class="w-full text-center bg-amber-400 text-black py-4 rounded-2xl font-black uppercase text-xs tracking-widest neon-btn cursor-pointer">
+              RESERVE SESSION
+            </button>
+          </div>
         </div>
 
-        <div class="glass p-10 rounded-[3rem] border-white/10 hover:border-amber-400/30 transition">
-          <h3 class="text-2xl font-bold mb-2 uppercase">Phototherapy</h3>
-          <p class="text-[10px] text-amber-400 font-black mb-6 tracking-widest uppercase">GPY01 Spectrometer</p>
-          <p class="text-gray-400 mb-8 text-sm italic">528-source array. Targeting collagen synthesis with 630nm Red and 850nm Near-Infrared.</p>
-          <div class="text-3xl font-bold text-white mb-8">$250</div>
-          <button class="w-full text-center border border-white/20 text-white py-4 rounded-2xl font-black uppercase text-xs tracking-widest hover:bg-white hover:text-black transition">Deploy Recovery</button>
+        <div class="glass p-10 rounded-[3rem] border-white/10 hover:border-amber-400/30 transition-colors duration-300 flex flex-col justify-between">
+          <div>
+            <h3 class="text-2xl font-bold mb-2 uppercase">Acne Defense</h3>
+            <p class="text-[10px] text-amber-400 font-black mb-6 tracking-widest uppercase">Blue LED + Oxygen Purge</p>
+            <p class="text-gray-400 mb-8 text-sm italic">Targets breakouts, inflammation, and oil control with medical-grade oxygen + LED therapy.</p>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-white mb-8">$185</div>
+            <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/eveproservices143/eveproglow'}); return false;"
+                    class="w-full text-center border border-white/20 text-white py-4 rounded-2xl font-black uppercase text-xs tracking-widest hover:bg-white hover:text-black transition cursor-pointer">
+              SCHEDULE SESSION
+            </button>
+          </div>
         </div>
 
       </div>
     </div>
   </section>
 
-  <section class="py-24 bg-zinc-950 border-t border-white/10">
-    <div class="max-w-5xl mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold tracking-tighter mb-16 italic uppercase">Self-Contained <span class="text-amber-400">Clinical Suite</span></h2>
-      <div class="grid md:grid-cols-2 gap-12 text-left">
-        <div class="flex gap-6">
-          <div class="text-amber-400 text-3xl"><i class="fa-solid fa-bed"></i></div>
-          <div>
-            <h4 class="font-black mb-2 uppercase tracking-widest text-xs">Clinical Table Provided</h4>
-            <p class="text-gray-400 text-sm">We provide a medical-grade, 500lb-capacity treatment bed. We bring the clinic; you provide the space.</p>
-          </div>
-        </div>
-        <div class="flex gap-6">
-          <div class="text-amber-400 text-3xl"><i class="fa-solid fa-microscope"></i></div>
-          <div>
-            <h4 class="font-black mb-2 uppercase tracking-widest text-xs">Mobile Command Center</h4>
-            <p class="text-gray-400 text-sm">Our J.L.MAO diagnostics are managed via an HD salon cart and monitor riser for real-time data visibility.</p>
-          </div>
-        </div>
+  <footer class="border-t border-white/10 bg-black pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col items-center text-center">
+      <div class="w-12 h-12 bg-gradient-to-br from-gold-300 to-gold-500 rounded-full flex items-center justify-center text-black font-serif italic font-bold text-2xl mb-6">E</div>
+      <h2 class="text-2xl font-serif tracking-widest uppercase mb-6">Evepro Glow</h2>
+      <p class="text-gray-500 text-sm font-light max-w-md mb-8">Elevating aesthetics through medical science and bespoke care. Strictly by appointment.</p>
+      
+      <div class="flex gap-6 mb-12">
+        <a href="#" class="w-10 h-10 rounded-full glass flex items-center justify-center text-gray-400 hover:text-gold-400 transition"><i class="fa-brands fa-instagram"></i></a>
+        <a href="sms:+15169624108" class="w-10 h-10 rounded-full glass flex items-center justify-center text-gray-400 hover:text-gold-400 transition"><i class="fa-solid fa-comment-sms"></i></a>
       </div>
+
+      <p class="text-gray-600 text-xs uppercase tracking-widest">© 2026 EVEPRO GLOW. All Rights Reserved.</p>
     </div>
-  </section>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, offset: 50 });
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      if (window.scrollY > 50) nav.classList.add('bg-black/80');
+      else nav.classList.remove('bg-black/80');
+    });
+  </script>
 
 </body>
 </html>
