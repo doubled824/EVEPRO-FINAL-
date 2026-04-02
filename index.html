@@ -1,246 +1,151 @@
+Here is the updated, production-ready code. I have removed the unnecessary FontAwesome script to improve page load times, added descriptive alt attributes to your images for accessibility and SEO, and cleaned up the indentation so it is easier to read and maintain.
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EvePro Glow | Clinical Skin Technology</title>
+    <meta name="description" content="AI Skin Analysis, Oxygen Infusion Facials and Clinical Skin Treatments delivered privately to your home in NYC and Long Island.">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
-<title>EvePro Glow | Clinical Skin Technology</title>
+    <style>
+        body {
+            background: black;
+            color: white;
+            font-family: 'Inter', sans-serif;
+        }
 
-<meta name="description" content="AI Skin Analysis, Oxygen Infusion Facials and Clinical Skin Treatments delivered privately to your home in NYC and Long Island.">
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-
-<script src="https://cdn.tailwindcss.com"></script>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-
-<style>
-
-body{
-background:black;
-color:white;
-font-family:Inter;
-}
-
-.glass{
-background:rgba(255,255,255,0.03);
-backdrop-filter:blur(16px);
-border:1px solid rgba(255,255,255,0.08);
-}
-
-.gradient-text{
-background:linear-gradient(to right,#fbbf24,#f59e0b);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
-</style>
-
+        .gradient-text {
+            background: linear-gradient(to right, #fbbf24, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- NAV -->
-
-<nav class="fixed top-0 w-full glass z-50">
-
-<div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-
-<h1 class="font-black text-xl uppercase">EvePro Glow</h1>
-
-<button onclick="Calendly.initPopupWidget({url:'https://calendly.com/eveproservices143/eveproglow'});return false;"
-class="bg-amber-400 text-black px-5 py-2 rounded-full font-bold text-xs uppercase">
-
-Book Appointment
-
-</button>
-
-</div>
-
-</nav>
-
-<!-- HERO -->
-
-<section class="min-h-screen flex items-center justify-center text-center px-6">
-
-<div class="max-w-4xl">
-
-<h1 class="text-6xl md:text-8xl font-black mb-6">
-
-Clinical Skin Results  
-<span class="gradient-text">Driven By Data</span>
-
-</h1>
-
-<p class="text-gray-400 text-xl mb-10">
-
-AI skin analysis and clinical facial treatments delivered privately to your home.
-
-</p>
-
-<button onclick="Calendly.initPopupWidget({url:'https://calendly.com/eveproservices143/eveproglow'});return false;"
-class="bg-amber-400 text-black px-10 py-4 rounded-xl font-bold text-lg">
-
-Schedule Your Skin Audit
-
-</button>
-
-</div>
-
-</section>
-
-<!-- APPROACH -->
-
-<section class="py-24 bg-zinc-950 text-center">
-
-<div class="max-w-4xl mx-auto px-6">
-
-<h2 class="text-4xl font-bold mb-8">
-
-The EvePro Approach
-
-</h2>
-
-<p class="text-gray-400 text-lg">
-
-Most facials rely on guesswork. EvePro Glow begins with a clinical AI skin analysis to map hydration, pores, pigmentation and skin age before treatment begins.
-
-</p>
-
-</div>
-
-</section>
-
-<!-- SKIN SCAN -->
-
-<section class="py-24 bg-black">
-
-<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-
-<img src="scanner.jpg" class="rounded-3xl shadow-xl">
-
-<div>
-
-<h2 class="text-4xl font-bold mb-6">
-
-AI Skin Analysis
-
-</h2>
-
-<ul class="space-y-3 text-gray-300">
-
-<li>Hydration mapping</li>
-<li>Pore analysis</li>
-<li>Collagen strength indicators</li>
-<li>Pigmentation detection</li>
-<li>Skin age comparison</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- TREATMENT -->
-
-<section class="py-24 bg-zinc-950">
-
-<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-
-<div>
-
-<h2 class="text-4xl font-bold mb-6">
-
-Oxygen Infusion Treatment
-
-</h2>
-
-<p class="text-gray-400">
-
-Medical oxygen and targeted serums improve hydration, stimulate circulation and restore glow.
-
-</p>
-
-</div>
-
-<img src="oxygen.jpg" class="rounded-3xl shadow-xl">
-
-</div>
-
-</section>
-
-<!-- SIGNATURE TREATMENT -->
-
-<section class="py-24 bg-black text-center">
-
-<div class="max-w-4xl mx-auto px-6">
-
-<h2 class="text-4xl font-bold mb-12">
-
-The EvePro Mind & Skin Reset
-
-</h2>
-
-<div class="space-y-4 text-gray-300 text-lg">
-
-<p>AI Skin Diagnosis</p>
-<p>Hydro Facial Deep Clean</p>
-<p>Oxygen Infusion Therapy</p>
-<p>LED Recovery Treatment</p>
-<p>Cold Hammer Finish</p>
-
-</div>
-
-<p class="mt-8 text-3xl font-bold">$199</p>
-
-</div>
-
-</section>
-
-<!-- CTA -->
-
-<section class="py-24 bg-zinc-950 text-center">
-
-<h2 class="text-5xl font-bold mb-6">
-
-Stop Guessing.  
-Treat Your Skin With Data.
-
-</h2>
-
-<button onclick="Calendly.initPopupWidget({url:'https://calendly.com/eveproservices143/eveproglow'});return false;"
-class="bg-amber-400 text-black px-12 py-5 rounded-xl font-bold text-xl">
-
-Book Your Skin Audit
-
-</button>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer class="py-12 border-t border-white/10 text-center">
-
-<p class="text-gray-500">
-
-NYC & Long Island • By Appointment Only
-
-</p>
-
-<p class="text-gray-500 mt-4">
-
-© 2026 EvePro Glow
-
-</p>
-
-</footer>
+    <nav class="fixed top-0 w-full glass z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+            <h1 class="font-black text-xl uppercase">EvePro Glow</h1>
+            <button onclick="Calendly.initPopupWidget({url:'https://calendly.com/eveproservices143/eveproglow'});return false;"
+                class="bg-amber-400 text-black px-5 py-2 rounded-full font-bold text-xs uppercase hover:bg-amber-300 transition-colors">
+                Book Appointment
+            </button>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex items-center justify-center text-center px-6">
+        <div class="max-w-4xl">
+            <h1 class="text-6xl md:text-8xl font-black mb-6">
+                Clinical Skin Results <br>
+                <span class="gradient-text">Driven By Data</span>
+            </h1>
+            <p class="text-gray-400 text-xl mb-10">
+                AI skin analysis and clinical facial treatments delivered privately to your home.
+            </p>
+            <button onclick="Calendly.initPopupWidget({url:'https://calendly.com/eveproservices143/eveproglow'});return false;"
+                class="bg-amber-400 text-black px-10 py-4 rounded-xl font-bold text-lg hover:bg-amber-300 transition-colors">
+                Schedule Your Skin Audit
+            </button>
+        </div>
+    </section>
+
+    <section class="py-24 bg-zinc-950 text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-8">
+                The EvePro Approach
+            </h2>
+            <p class="text-gray-400 text-lg">
+                Most facials rely on guesswork. EvePro Glow begins with a clinical AI skin analysis to map hydration, pores, pigmentation and skin age before treatment begins.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <img src="scanner.jpg" alt="AI skin analysis scanner interface mapping facial contours" class="rounded-3xl shadow-xl">
+            <div>
+                <h2 class="text-4xl font-bold mb-6">
+                    AI Skin Analysis
+                </h2>
+                <ul class="space-y-3 text-gray-300 list-disc list-inside">
+                    <li>Hydration mapping</li>
+                    <li>Pore analysis</li>
+                    <li>Collagen strength indicators</li>
+                    <li>Pigmentation detection</li>
+                    <li>Skin age comparison</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-bold mb-6">
+                    Oxygen Infusion Treatment
+                </h2>
+                <p class="text-gray-400">
+                    Medical oxygen and targeted serums improve hydration, stimulate circulation and restore glow.
+                </p>
+            </div>
+            <img src="oxygen.jpg" alt="Patient receiving an oxygen infusion skin treatment" class="rounded-3xl shadow-xl">
+        </div>
+    </section>
+
+    <section class="py-24 bg-black text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12">
+                The EvePro Mind & Skin Reset
+            </h2>
+            <div class="space-y-4 text-gray-300 text-lg">
+                <p>AI Skin Diagnosis</p>
+                <p>Hydro Facial Deep Clean</p>
+                <p>Oxygen Infusion Therapy</p>
+                <p>LED Recovery Treatment</p>
+                <p>Cold Hammer Finish</p>
+            </div>
+            <p class="mt-8 text-3xl font-bold">$199</p>
+        </div>
+    </section>
+
+    <section class="py-24 bg-zinc-950 text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-5xl font-bold mb-6">
+                Stop Guessing. <br>
+                Treat Your Skin With Data.
+            </h2>
+            <button onclick="Calendly.initPopupWidget({url:'https://calendly.com/eveproservices143/eveproglow'});return false;"
+                class="bg-amber-400 text-black px-12 py-5 rounded-xl font-bold text-xl hover:bg-amber-300 transition-colors mt-6">
+                Book Your Skin Audit
+            </button>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-white/10 text-center">
+        <p class="text-gray-500">
+            NYC & Long Island • By Appointment Only
+        </p>
+        <p class="text-gray-500 mt-4">
+            © 2026 EvePro Glow
+        </p>
+    </footer>
 
 </body>
-
 </html>
+
+```
+
